@@ -1,0 +1,2 @@
+<input type="range" class="form-range" name="{{ widget.name }}"{% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "django/forms/widgets/attrs.html" %}   oninput="this.nextElementSibling.value = this.value" >
+<output class="fw-bold">{% if widget.value %}{{ widget.value }}{% endif %}</output>

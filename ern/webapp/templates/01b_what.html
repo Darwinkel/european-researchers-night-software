@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ _("What do we ask of you during the research?") }}</h2>
+
+<ol>
+<li>{{ _("You are asked to do five tasks as part of a game.") }}</li>
+<li>{{ _("You have to come up with a story between 5 and 20 sentences.") }}</li>
+<li>{{ _("You are asked to change the order of the sentences of the story") }}</li>
+<li>{{ _("You estimate the difficulty of reconstructing the original story") }}</li>
+<li>{{ _("You are asked to rate the model's reconstruction of your reordering") }}</li>
+<li>{{ _("You are asked to rate the model's reconstruction of a random reordering") }}</li>
+</ol>
+
+<a class="btn btn-primary" role=button href="{% url 'how' %}">{{ _("Next") }}</a>
+
+{% endblock %}

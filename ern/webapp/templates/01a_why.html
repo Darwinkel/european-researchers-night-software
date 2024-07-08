@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ _("Why this research?") }}</h2>
+
+<p>{{ _("Thank you for participating in this experiment!") }}</p>
+
+<p>{{ _("You will help the Computational Linguistics Group at the RuG to collect data to train and test the next generation of Large Language Models. Thanks in advance! Your contribution will support the creation of challenging and high-quality data. By participating in this data collection effort you can contribute to better, safer, and trustworthy AI technologies for Dutch and English.") }}</p>
+
+<a class="btn btn-primary" role=button href="{% url 'what' %}">{{ _("Next") }}</a>
+
+{% endblock %}

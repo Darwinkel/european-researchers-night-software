@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load i18n %}
+
+{% load static %}
+<img class="d-block mx-auto" size=50px src="{% static 'poster_leaflet_researchers_night.png' %}" alt="ERN poster" height="750">
+
+<br>
+
+<form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+    <div class="form-floating">
+    <input name="next" type="hidden" value="{% url 'why' %}">
+    <select class="form-select" name="language" id="language_selector">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <label class="form-label" for="language_selector">Language / taal</label>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Next / volgende</button>
+</form>
+{% endblock %}

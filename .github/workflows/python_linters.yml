@@ -1,0 +1,76 @@
+name: Check the code quality using linters and formatters
+
+on:
+  pull_request:
+    branches:
+      - "**"
+  push:
+    branches:
+      - "main"
+
+jobs:
+  ruff-format:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+          cache: 'poetry'
+
+      - name: Install dev dependencies
+        run: poetry install --only dev
+
+      - name: Run format
+        run: poetry run ruff format --check ern
+
+  ruff-check:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+          cache: 'poetry'
+
+      - name: Install dev dependencies
+        run: poetry install --only dev
+
+      - name: Run run linter
+        run: poetry run ruff check --output-format=github ern
+
+  mypy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+          cache: 'poetry'
+
+      - name: Install dev dependencies
+        run: poetry install --only dev
+
+      - name: Run static type checking
+        run: poetry run mypy ern/*.py

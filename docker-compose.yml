@@ -1,0 +1,24 @@
+services:
+  django-ern:
+    image: "ghcr.io/darwinkel/european-researchers-night-software:main"
+    build: .
+    ports:
+      - '8000:8000'
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - db:/usr/src/app/db/
+    environment:
+      DEBUG: "False"
+      SECRET_KEY: "ChangeMe!"
+      ALLOWED_HOST: "https://ern.darwinkel.net"
+      NL_OPENAI_HOST: "http://host.docker.internal:8891/v1"
+      NL_MODEL: "BramVanroy/GEITje-7B-ultra"
+      EN_OPENAI_HOST: "http://host.docker.internal:8890/v1"
+      EN_MODEL: "microsoft/Phi-3.5-mini-instruct"
+volumes:
+  db:
