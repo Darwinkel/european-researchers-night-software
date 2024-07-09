@@ -1,5 +1,8 @@
 # European Researcher's Night Software
 
+**Can you out-smart AI?**
+
+
 
 ## Goal
 
@@ -24,10 +27,33 @@
 
 ## UI/UX
 As a user:
+- When opening a new session, I have to accept a consent form
 - I have to come up with a novel short story, similar to, but not based on, existing stories
 - I suggest a "random" shuffle of the sentences
   - The system also generates a true random shuffle
 - I am provided with some unbiased, nonsuggestive random examples
 - I am provided with some random suggestions for themes or subjects
-- I can optionally leave my sex and age demographics before AND after the survey
-- 
+- I can optionally leave my sex and age demographics after the survey
+
+
+### User flow
+
+Every page has a "Stoppen met het experiment" button, which redirects to the first page.
+
+1. First page, the default, shows an explanation of the experiment, and tells users to sign the consent form
+2. User clicks "Volgende"
+3. User gets a textbox where they can enter their story. The page shows some suggestions for themes and examples
+4. User clicks "Volgende"
+5. User sees their story, and can shuffle it. The page shows some examples of shuffles.
+6. User clicks "Volgende"
+7. User sees the shuffled story, and can rate the fluency, logical flow, and factual accuracy of the story
+8. User clicks "Volgende"
+9. User sees the randomly shuffled story, and can rate the fluency, logical flow, and factual accuracy of the story
+8. User clicks "Volgende"
+9. User enters a thank-you page, with a request for demographics. They can click "Ik wil graag mijn leeftijd en geslacht invullen voor wetenschappelijk onderzoek" or "Nee, bedankt". First button redirects to a page where they can enter it, second button redirects to the first page.
+
+## Data structures
+
+Sample
+
+Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstructed human shuffle | LLM reconstructed random shuffle | Rating of LLM reconstructed human shuffle | Rating of LLM reconstructred random shuffle
