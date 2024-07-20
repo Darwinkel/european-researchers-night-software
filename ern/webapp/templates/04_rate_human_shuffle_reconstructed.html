@@ -1,5 +1,13 @@
-{% if test %}
-    <p>{{ test }}</p>
-{% else %}
-    <p>No test.</p>
-{% endif %}
+<h2>Sample - {{ sample_id }} </h2>
+
+{{ story_text }}
+
+{{ human_reconstructed_story }}
+
+<form action="{% url 'rate_human_shuffle_reconstructed' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<a href="{% url 'index' %}">{{ _("End experiment") }}</a>

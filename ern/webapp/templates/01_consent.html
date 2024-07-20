@@ -1,6 +1,8 @@
-<h2>Sample - {{ sample_id }} </h2>
+# The experiment
 
-<form action="{% url 'enter_story' %}" method="post">
+# Consent
+
+<form action="{% url 'consent' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">

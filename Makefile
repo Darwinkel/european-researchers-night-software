@@ -13,4 +13,5 @@ quality:
 	make typing
 
 run:
+	python -m nltk.downloader punkt # Needed for basic sentence tokenization
 	cd ern && python manage.py runserver

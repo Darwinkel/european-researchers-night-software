@@ -1,6 +1,4 @@
-<h2>Sample - {{ sample_id }} </h2>
-
-<form action="{% url 'enter_story' %}" method="post">
+<form action="{% url 'demographics' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
