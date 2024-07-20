@@ -88,12 +88,12 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
             sample.human_shuffled_story = form.cleaned_data["human_shuffled_story"]
 
             tokenized_human_shuffled_story = sent_tokenize(sample.human_shuffled_story)
-            sample.llm_reconstructed_human_story = "An LLM reconstructed the following human shuffle: " + tokenized_human_shuffled_story # TODO
+            sample.llm_reconstructed_human_story = "An LLM reconstructed the following human shuffle: " + sample.human_shuffled_story # TODO
 
             tokenized_story = sent_tokenize(sample.story_text)
             sample.random_shuffled_story = random.sample(tokenized_story, len(tokenized_story))
 
-            sample.llm_reconstructed_random_story = "An LLM reconstructed the following random shuffle: " + sample.random_shuffled_story # TODO
+            sample.llm_reconstructed_random_story = "An LLM reconstructed the following random shuffle: " + sample.human_shuffled_story # TODO
 
             sample.save()
             return redirect("rate_human_shuffle_reconstructed")
@@ -102,7 +102,8 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
         form = ShuffleStoryForm({"human_shuffled_story": sample.story_text})
     return render(request, "03_shuffle_story.html", {
         "form": form,
-        "sample_id": sample.id
+        "sample_id": sample.id,
+        "story_text": sample.story_text
     })
 
 
