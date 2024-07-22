@@ -40,7 +40,7 @@ def demographics(request: HttpRequest) -> HttpResponse:
         form = DemographicsForm(request.POST)
 
         if form.is_valid():
-            sample = Sample(timestamp=datetime.now(), language="nl", sex=form.cleaned_data["sex"], age=form.cleaned_data["age"])
+            sample = Sample(timestamp=datetime.now(), language=request.LANGUAGE_CODE, sex=form.cleaned_data["sex"], age=form.cleaned_data["age"])
             sample.save()
             request.session['sample_id'] = sample.id
             return redirect("enter_story")
@@ -84,7 +84,11 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
 
         form = ShuffleStoryForm(request.POST)
 
+        print(request.POST)
+
+
         if form.is_valid():
+            print(form.cleaned_data)
             sample.human_shuffled_story = form.cleaned_data["human_shuffled_story"]
 
             tokenized_human_shuffled_story = sent_tokenize(sample.human_shuffled_story)
@@ -103,7 +107,8 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
     return render(request, "03_shuffle_story.html", {
         "form": form,
         "sample_id": sample.id,
-        "story_text": sample.story_text
+        "story_text": sample.story_text,
+        "tokenized_story_text": sent_tokenize(sample.story_text)
     })
 
 

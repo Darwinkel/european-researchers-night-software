@@ -1,6 +1,7 @@
 
 
 from django import forms
+from .models import SEX_ENUM
 
 
 class ConsentForm(forms.Form):
@@ -11,16 +12,8 @@ class ConsentForm(forms.Form):
 
 class DemographicsForm(forms.Form):
 
-    SEX_CHOICES = [
-        ('', 'Select...'),
-        ('female', 'Female'),
-        ('male', 'Male'),
-        ('other', 'Other'),
-        ('prefer_not_to_say', 'Prefer not to say'),
-    ]
-
-    sex = forms.ChoiceField(choices=SEX_CHOICES, required=False, label='Sex')
-    age = forms.IntegerField(min_value=0, required=False, label='Age')
+    sex = forms.ChoiceField(choices=SEX_ENUM, required=False, label='Sex')
+    age = forms.IntegerField(initial='', required=False, label='Age')
 
 class StoryForm(forms.Form):
     story_text = forms.CharField(required=True, label='Story', widget=forms.Textarea)

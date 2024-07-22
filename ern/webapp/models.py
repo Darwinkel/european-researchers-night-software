@@ -5,7 +5,8 @@ from django.db import models
 SEX_ENUM = {
     "M": "Male",
     "F": "Female",
-    "O": "Other/Unspecified/Prefer not to say"
+    "O": "Other/Unspecified",
+    "P": "Prefer not to say",
 }
 
 LANG_ENUM = {
@@ -20,9 +21,9 @@ class Sample(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
 
-    language = models.CharField(choices=SEX_ENUM, default="nl", max_length=2)
-    sex = models.CharField(choices=SEX_ENUM, default="O", max_length=1)
-    age = models.IntegerField(default=18, validators=[MinValueValidator(12), MaxValueValidator(99)])
+    language = models.CharField(choices=LANG_ENUM, default="nl", max_length=2)
+    sex = models.CharField(choices=SEX_ENUM, default="P", max_length=1)
+    age = models.IntegerField(default=None, blank=True, null=True) # validators=[MinValueValidator(12), MaxValueValidator(99)]
 
     story_text = models.CharField(max_length=500)
     human_shuffled_story = models.CharField(max_length=500)
