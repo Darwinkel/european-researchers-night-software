@@ -19,7 +19,7 @@ class StoryForm(forms.Form):
     story_text = forms.CharField(required=True, label='Story', widget=forms.Textarea)
 
 class RateReconstructionForm(forms.Form):
-    fluency = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Fluency')
-    flow = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Flow')
-    accuracy = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Accuracy')
+    flow = forms.IntegerField(min_value=0, max_value=10, required=True, label='Flow')
+    fluency = forms.IntegerField(min_value=0, max_value=10, required=True, label='Fluency')
+    accuracy = forms.IntegerField(min_value=0, max_value=10, required=True, label='Accuracy')
 

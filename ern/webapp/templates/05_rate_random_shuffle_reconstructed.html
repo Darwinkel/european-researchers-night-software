@@ -1,7 +1,27 @@
 <h2>Sample - {{ sample_id }} </h2>
 
+<h2>Task 4: Rating the model's reconstruction of the system's random shuffle</h2>
+This task is identical to the previous one, except that the story has been shuffled completely randomly by the system.
+
+Your task is to rate how well the model has reconstructed the story on the same three points as before:
+
+<h4>Flow</h4>
+How well has the model reconstructed the story?
+A score of 0 means that the model has made many mistakes or produced garbage output, while a score of 10 means that the model has successfully reconstructed the logical ordering of the story.
+
+<h4>Fluency</h4>
+It is possible that the model rewrote (some parts of) the story in a way that is grammatically incorrect or awkward.
+A score of 0 means that the model has made many mistakes or produced garbage output.
+A score of 10 means that the model has made minimal modifications, perhaps appropriately correcting a typo or two.
+
+<h4>Accuracy</h4>
+The factual accuracy of the story. That is, did the model add or remove information that was not present in the original story?
+A score of 0 means that the model has fabricated information, while a score of 10 means that the model has not added or removed any information.
+
+<h2>Your original story</h2>
 {{ story_text }}
 
+<h2>The LLM's reconstruction</h2>
 {{ random_reconstructed_story }}
 
 <form action="{% url 'rate_random_shuffle_reconstructed' %}" method="post">

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-24 11:31+0200\n"
+"POT-Creation-Date: 2024-07-24 14:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,19 +26,19 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: webapp/templates/01_consent.html:8
-#: webapp/templates/01a_enter_demographics.html:4
-#: webapp/templates/02_enter_story.html:6
-#: webapp/templates/03_shuffle_story.html:104
+#: webapp/templates/01_consent.html:50
+#: webapp/templates/01a_enter_demographics.html:7
+#: webapp/templates/02_enter_story.html:18
+#: webapp/templates/03_shuffle_story.html:109
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:10
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:10
 msgid "Next"
 msgstr "Volgende"
 
-#: webapp/templates/01_consent.html:11
-#: webapp/templates/01a_enter_demographics.html:7
-#: webapp/templates/02_enter_story.html:9
-#: webapp/templates/03_shuffle_story.html:107
+#: webapp/templates/01_consent.html:53
+#: webapp/templates/01a_enter_demographics.html:10
+#: webapp/templates/02_enter_story.html:21
+#: webapp/templates/03_shuffle_story.html:112
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:13
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:13
 #: webapp/templates/06_thank_you.html:3
