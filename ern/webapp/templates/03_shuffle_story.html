@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     {{ form }}
     <div class="container">
   {% for sentence in tokenized_story_text %}
-    <div draggable="true" class="box"><input type="hidden" name="test" value="{{ sentence }}">{{ sentence }}</div>
+    <div draggable="true" class="box"><input type="hidden" name="dragdrop_list" value="{{ sentence }}">{{ sentence }}</div>
   {% endfor %}
 </div>
     <input type="submit" value="Submit">

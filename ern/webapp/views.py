@@ -85,11 +85,8 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
         form = ShuffleStoryForm(request.POST)
 
         print(request.POST)
-
-
         if form.is_valid():
-            print(form.cleaned_data)
-            sample.human_shuffled_story = form.cleaned_data["human_shuffled_story"]
+            sample.human_shuffled_story = str(request.POST.getlist("dragdrop_list"))
 
             tokenized_human_shuffled_story = sent_tokenize(sample.human_shuffled_story)
             sample.llm_reconstructed_human_story = "An LLM reconstructed the following human shuffle: " + sample.human_shuffled_story # TODO

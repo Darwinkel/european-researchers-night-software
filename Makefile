@@ -14,4 +14,6 @@ quality:
 
 run:
 	python -m nltk.downloader punkt # Needed for basic sentence tokenization
+	cd ern && python3 manage.py makemessages -l nl
+	cd ern && django-admin compilemessages
 	cd ern && python manage.py runserver
