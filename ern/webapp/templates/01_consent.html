@@ -1,11 +1,53 @@
-# The experiment
+<h1>The experiment</h1>
 
-# Consent
+<h2>Why this research?</h2>
+
+Thank you for participating in this experiment!
+
+You will help the Computational Linguistics Group of the Faculty of Art (University of Groningen) to collect data to train and test the next generation of Large Language
+Models (e.g. ChatGPT) for Dutch and English.
+
+Your contribution will support the creation of challenging and high-quality data.
+Data are one of the key ingredients of Large Language Models.
+Dutch is language spoken by more than 20M people, but it still misses good training and evaluation data for these new technologies.
+By participating in this data collection effort you will have a chance to contribute to better, safer, and trustworthy AI technologies for Dutch and English.
+
+<h2>What do we ask of you during the research?</h2>
+By participating in any of these games, you will have fun and have the opportunity to learn about the limits of current AI technologies for Dutch.
+
+<h2>What are the consequences of participation?</h2>
+By participating in any of these games, you will have fun and have the opportunity to learn about the limits of current AI technologies for Dutch and English.
+
+<h2>How will we treat your data?</h2>
+
+We will collect only two sociodemographic data: age and sex. The disclosure of this information is totally voluntary. You will be asked to provide this information at the beginning of the experiment.
+
+The answers to the games will be used to create new datasets for training and testing LLMs in Dutch. These are the core data that we will process and make available in an aggregated and disaggregate form. In no way, there can be a link back to your answers.
+
+The two socio-demographics data point you will decide to disclose will be made available in an aggregated form (e.g., how many men of age group 18-25 have participated). The entire data collection process is anonymous.
+
+The data will be processed by researchers at the Computational Linguistics Group of the faculty of Arts under the coordination of prof. Malvina Nissim.
+
+The sociodemographic data will serve to offer other researchers additional insights on who has contributed to the creation of the data, offering information on potential bias.
+
+<h2>Do you have to participate in this study?</h2>
+Participation in this study is voluntary. If you decide not to participate, you do not need to explain why, and there will be no negative consequences for you. You have the right to withdraw from this study at any time until the first scientific output of the study has been submitted for publication.
+
+<h2>What else do you need to know?</h2>
+We encourage you to share any questions or comments you may have about the study.
+You can ask your questions now, during, or after the study.
+You can do so by speaking with one of the researchers present or by emailing the research team
+(m.nissim@rug.nl).
+Do you have questions/concerns about your rights as a research participant or about the conduct of the research team? In that case, please contact the Research Ethical Review Committee (CETO) of the Faculties of Arts, Philosophy, and Science &amp; Engineering of the University of Groningen: ceto@rug.nl.
+
+<h2>Consent</h2>
+
+Before we can begin, you must consent to participate in this experiment. Please read the following information and click the "Next" button to continue.
 
 <form action="{% url 'consent' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Submit">
+    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
 <a href="{% url 'index' %}">{{ _("End experiment") }}</a>

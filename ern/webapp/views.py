@@ -6,7 +6,7 @@ from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.template.defaulttags import url
 
-from .forms import ConsentForm, DemographicsForm, StoryForm, ShuffleStoryForm, RateReconstructionForm
+from .forms import ConsentForm, DemographicsForm, StoryForm, RateReconstructionForm
 from .models import Sample
 
 from nltk.tokenize import sent_tokenize
@@ -82,27 +82,22 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
 
     if request.method == "POST":
 
-        form = ShuffleStoryForm(request.POST)
-
         print(request.POST)
-        if form.is_valid():
-            sample.human_shuffled_story = str(request.POST.getlist("dragdrop_list"))
+        sample.human_shuffled_story = str(request.POST.getlist("dragdrop_list"))
+        sample.human_shuffled_story_difficulty = request.POST.get("difficulty")
 
-            tokenized_human_shuffled_story = sent_tokenize(sample.human_shuffled_story)
-            sample.llm_reconstructed_human_story = "An LLM reconstructed the following human shuffle: " + sample.human_shuffled_story # TODO
+        tokenized_human_shuffled_story = sent_tokenize(sample.human_shuffled_story)
+        sample.llm_reconstructed_human_story = "An LLM reconstructed the following human shuffle: " + sample.human_shuffled_story # TODO
 
-            tokenized_story = sent_tokenize(sample.story_text)
-            sample.random_shuffled_story = random.sample(tokenized_story, len(tokenized_story))
+        tokenized_story = sent_tokenize(sample.story_text)
+        sample.random_shuffled_story = random.sample(tokenized_story, len(tokenized_story))
 
-            sample.llm_reconstructed_random_story = "An LLM reconstructed the following random shuffle: " + sample.human_shuffled_story # TODO
+        sample.llm_reconstructed_random_story = "An LLM reconstructed the following random shuffle: " + sample.human_shuffled_story # TODO
 
-            sample.save()
-            return redirect("rate_human_shuffle_reconstructed")
+        sample.save()
+        return redirect("rate_human_shuffle_reconstructed")
 
-    else:
-        form = ShuffleStoryForm({"human_shuffled_story": sample.story_text})
     return render(request, "03_shuffle_story.html", {
-        "form": form,
         "sample_id": sample.id,
         "story_text": sample.story_text,
         "tokenized_story_text": sent_tokenize(sample.story_text)

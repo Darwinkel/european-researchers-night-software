@@ -3,10 +3,10 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 SEX_ENUM = {
+    "P": "Prefer not to say",
+    "O": "Other/Unspecified",
     "M": "Male",
     "F": "Female",
-    "O": "Other/Unspecified",
-    "P": "Prefer not to say",
 }
 
 LANG_ENUM = {
@@ -27,6 +27,7 @@ class Sample(models.Model):
 
     story_text = models.CharField(max_length=500)
     human_shuffled_story = models.CharField(max_length=500)
+    human_shuffled_story_difficulty = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
     random_shuffled_story = models.CharField(max_length=500)
 
     llm_reconstructed_human_story = models.CharField(default="", max_length=500)

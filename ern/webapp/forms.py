@@ -13,16 +13,13 @@ class ConsentForm(forms.Form):
 class DemographicsForm(forms.Form):
 
     sex = forms.ChoiceField(choices=SEX_ENUM, required=False, label='Sex')
-    age = forms.IntegerField(initial='', required=False, label='Age')
+    age = forms.IntegerField(initial='', min_value=0, max_value=99, required=False, label='Age (leave blank if you prefer not to say)')
 
 class StoryForm(forms.Form):
     story_text = forms.CharField(required=True, label='Story', widget=forms.Textarea)
 
-class ShuffleStoryForm(forms.Form):
-    human_shuffled_story = forms.CharField(required=True, label='Shuffled story', widget=forms.Textarea)
-
 class RateReconstructionForm(forms.Form):
-    fluency = forms.IntegerField(min_value=0, required=False, label='Fluency')
-    flow = forms.IntegerField(min_value=0, required=False, label='Flow')
-    accuracy = forms.IntegerField(min_value=0, required=False, label='Accuracy')
+    fluency = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Fluency')
+    flow = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Flow')
+    accuracy = forms.IntegerField(initial=5, min_value=0, max_value=10, required=True, label='Accuracy')
 

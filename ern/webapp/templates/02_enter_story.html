@@ -1,9 +1,21 @@
 <h2>Sample - {{ sample_id }} </h2>
 
+<h2>Task</h2>
+
+You have to come up with a short story (between 5 and 30 sentences) that would be appropriate for children. It can be similar to an existing story (e.g., Cindarella), but should not be a direct copy. You can also create a completely new story.
+
+On the next page, the story will be split into sentences. You will then be asked to shuffle the sentences and estimate the difficulty of reconstructing the story.
+
+
+
+<h2>Examples</h2>
+
+
+
 <form action="{% url 'enter_story' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Submit">
+    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
 <a href="{% url 'index' %}">{{ _("End experiment") }}</a>
