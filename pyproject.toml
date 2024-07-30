@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Patrick Darwinkel <patrick@darwinkel.net>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -11,6 +12,11 @@ django = "^5.0.7"
 ruff = "^0.5.1"
 mypy = "^1.10.1"
 nltk = "^3.8.1"
+transformers = "^4.43.3"
+torch = "^2.4.0"
+accelerate = "^0.33.0"
+bitsandbytes = "^0.43.2"
+setuptools = "^72.1.0"
 
 
 [build-system]
@@ -22,6 +28,7 @@ build-backend = "poetry.core.masonry.api"
 line-length = 120
 target-version = "py312"
 fix = true
+extend-exclude = ["migrations"]
 
 [tool.ruff.lint]
 select = ["ALL"]

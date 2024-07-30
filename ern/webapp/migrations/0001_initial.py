@@ -5,27 +5,68 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Sample',
+            name="Sample",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('sex', models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other/Unspecified/Prefer not to say')], default='O', max_length=1)),
-                ('age', models.IntegerField(default=18, validators=[django.core.validators.MinValueValidator(12), django.core.validators.MaxValueValidator(99)])),
-                ('story_text', models.CharField(max_length=500)),
-                ('human_shuffled_story', models.CharField(max_length=500)),
-                ('random_shuffled_story', models.CharField(max_length=500)),
-                ('llm_reconstructed_story', models.CharField(max_length=500)),
-                ('rating_reconstructed_fluency', models.IntegerField(default=5, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)])),
-                ('rating_reconstructed_flow', models.IntegerField(default=5, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)])),
-                ('rating_reconstructed_accuracy', models.IntegerField(default=5, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)])),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                (
+                    "sex",
+                    models.CharField(
+                        choices=[("M", "Male"), ("F", "Female"), ("O", "Other/Unspecified/Prefer not to say")],
+                        default="O",
+                        max_length=1,
+                    ),
+                ),
+                (
+                    "age",
+                    models.IntegerField(
+                        default=18,
+                        validators=[
+                            django.core.validators.MinValueValidator(12),
+                            django.core.validators.MaxValueValidator(99),
+                        ],
+                    ),
+                ),
+                ("story_text", models.CharField(max_length=500)),
+                ("human_shuffled_story", models.CharField(max_length=500)),
+                ("random_shuffled_story", models.CharField(max_length=500)),
+                ("llm_reconstructed_story", models.CharField(max_length=500)),
+                (
+                    "rating_reconstructed_fluency",
+                    models.IntegerField(
+                        default=5,
+                        validators=[
+                            django.core.validators.MinValueValidator(0),
+                            django.core.validators.MaxValueValidator(10),
+                        ],
+                    ),
+                ),
+                (
+                    "rating_reconstructed_flow",
+                    models.IntegerField(
+                        default=5,
+                        validators=[
+                            django.core.validators.MinValueValidator(0),
+                            django.core.validators.MaxValueValidator(10),
+                        ],
+                    ),
+                ),
+                (
+                    "rating_reconstructed_accuracy",
+                    models.IntegerField(
+                        default=5,
+                        validators=[
+                            django.core.validators.MinValueValidator(0),
+                            django.core.validators.MaxValueValidator(10),
+                        ],
+                    ),
+                ),
             ],
         ),
     ]

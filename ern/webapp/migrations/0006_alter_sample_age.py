@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('webapp', '0005_alter_sample_age'),
+        ("webapp", "0005_alter_sample_age"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sample',
-            name='age',
+            model_name="sample",
+            name="age",
             field=models.IntegerField(blank=True, default=None, null=True),
         ),
     ]

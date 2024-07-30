@@ -4,15 +4,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('webapp', '0001_initial'),
+        ("webapp", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='sample',
-            name='language',
-            field=models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other/Unspecified/Prefer not to say')], default='nl', max_length=2),
+            model_name="sample",
+            name="language",
+            field=models.CharField(
+                choices=[("M", "Male"), ("F", "Female"), ("O", "Other/Unspecified/Prefer not to say")],
+                default="nl",
+                max_length=2,
+            ),
         ),
     ]

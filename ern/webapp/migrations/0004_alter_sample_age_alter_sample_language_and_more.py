@@ -4,25 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('webapp', '0003_rename_rating_reconstructed_accuracy_sample_rating_reconstructed_human_accuracy_and_more'),
+        ("webapp", "0003_rename_rating_reconstructed_accuracy_sample_rating_reconstructed_human_accuracy_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sample',
-            name='age',
-            field=models.IntegerField(blank=True, default=''),
+            model_name="sample",
+            name="age",
+            field=models.IntegerField(blank=True, default=""),
         ),
         migrations.AlterField(
-            model_name='sample',
-            name='language',
-            field=models.CharField(choices=[('nl', 'Nederlands'), ('en', 'English')], default='nl', max_length=2),
+            model_name="sample",
+            name="language",
+            field=models.CharField(choices=[("nl", "Nederlands"), ("en", "English")], default="nl", max_length=2),
         ),
         migrations.AlterField(
-            model_name='sample',
-            name='sex',
-            field=models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other/Unspecified'), ('P', 'Prefer not to say')], default='P', max_length=1),
+            model_name="sample",
+            name="sex",
+            field=models.CharField(
+                choices=[("M", "Male"), ("F", "Female"), ("O", "Other/Unspecified"), ("P", "Prefer not to say")],
+                default="P",
+                max_length=1,
+            ),
         ),
     ]

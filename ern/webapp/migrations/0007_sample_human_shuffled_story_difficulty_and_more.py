@@ -5,20 +5,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('webapp', '0006_alter_sample_age'),
+        ("webapp", "0006_alter_sample_age"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='sample',
-            name='human_shuffled_story_difficulty',
-            field=models.IntegerField(default=5, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)]),
+            model_name="sample",
+            name="human_shuffled_story_difficulty",
+            field=models.IntegerField(
+                default=5,
+                validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(10)],
+            ),
         ),
         migrations.AlterField(
-            model_name='sample',
-            name='sex',
-            field=models.CharField(choices=[('P', 'Prefer not to say'), ('O', 'Other/Unspecified'), ('M', 'Male'), ('F', 'Female')], default='P', max_length=1),
+            model_name="sample",
+            name="sex",
+            field=models.CharField(
+                choices=[("P", "Prefer not to say"), ("O", "Other/Unspecified"), ("M", "Male"), ("F", "Female")],
+                default="P",
+                max_length=1,
+            ),
         ),
     ]

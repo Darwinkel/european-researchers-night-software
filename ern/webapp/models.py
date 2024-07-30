@@ -1,5 +1,6 @@
 """Webapp models file."""
-from django.core.validators import MinValueValidator, MaxValueValidator
+
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 SEX_ENUM = {
@@ -14,28 +15,43 @@ LANG_ENUM = {
     "en": "English",
 }
 
+
 class Sample(models.Model):
     """Primary model for participant data."""
 
-
     timestamp = models.DateTimeField(auto_now_add=True)
-
 
     language = models.CharField(choices=LANG_ENUM, default="nl", max_length=2)
     sex = models.CharField(choices=SEX_ENUM, default="P", max_length=1)
-    age = models.IntegerField(default=None, blank=True, null=True) # validators=[MinValueValidator(12), MaxValueValidator(99)]
+    age = models.IntegerField(
+        default=None, blank=True, null=True
+    )  # validators=[MinValueValidator(12), MaxValueValidator(99)]
 
     story_text = models.CharField(max_length=500)
     human_shuffled_story = models.CharField(max_length=500)
-    human_shuffled_story_difficulty = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    human_shuffled_story_difficulty = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
     random_shuffled_story = models.CharField(max_length=500)
 
     llm_reconstructed_human_story = models.CharField(default="", max_length=500)
-    rating_reconstructed_human_fluency = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
-    rating_reconstructed_human_flow = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
-    rating_reconstructed_human_accuracy = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    rating_reconstructed_human_fluency = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
+    rating_reconstructed_human_flow = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
+    rating_reconstructed_human_accuracy = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
 
     llm_reconstructed_random_story = models.CharField(default="", max_length=500)
-    rating_reconstructed_random_fluency = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
-    rating_reconstructed_random_flow = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
-    rating_reconstructed_random_accuracy = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    rating_reconstructed_random_fluency = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
+    rating_reconstructed_random_flow = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
+    rating_reconstructed_random_accuracy = models.IntegerField(
+        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
