@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 14:27+0200\n"
+"POT-Creation-Date: 2024-07-30 14:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,9 +26,7 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: webapp/templates/03_shuffle_story.html:15
-#: webapp/templates/04_rate_human_shuffle_reconstructed.html:44
-#: webapp/templates/05_rate_random_shuffle_reconstructed.html:44
+#: webapp/templates/03_shuffle_story.html:12
 #: webapp/templates/bootstrap_form.html:13
 #: webapp/templates/bootstrap_form_checkbox.html:13
 msgid "Next"

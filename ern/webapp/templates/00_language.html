@@ -8,6 +8,7 @@
 
 <form action="{% url 'set_language' %}" method="post">
     {% csrf_token %}
+    <div class="mb-3">
     <div class="form-floating">
     <input name="next" type="hidden" value="{% url 'consent' %}">
     <select class="form-select" name="language" id="language_selector">
@@ -21,6 +22,7 @@
         {% endfor %}
     </select>
     <label class="form-label" for="language_selector">Language / taal</label>
+    </div>
     </div>
     <button type="submit" class="btn btn-primary">Next / volgende</button>
 </form>
