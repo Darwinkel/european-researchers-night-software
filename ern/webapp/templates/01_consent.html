@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>Can you out-smart AI? A game of story coherence</h1>
 
 <h2>Why this research?</h2>
@@ -54,7 +57,6 @@ Before we can begin, you must consent to participate in this experiment. Please 
 <form action="{% url 'consent' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
-<a href="{% url 'index' %}">{{ _("End experiment") }}</a>
+{% endblock %}

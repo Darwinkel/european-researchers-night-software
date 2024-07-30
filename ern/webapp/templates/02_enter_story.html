@@ -1,6 +1,9 @@
-<h2>Sample - {{ sample_id }} </h2>
+{% extends "base.html" %}
 
-<h2>Task 1: Coming up with a story</h2>
+{% block content %}
+
+<h1>Task 1: Coming up with a story</h1>
+<p class="fw-italic">Sample - {{ sample_id }} </p>
 
 You have to come up with a short story (between 5 and 30 sentences) that would be appropriate for children. It should be a new story, but it can be similar in style and form to existing ones such as Cindarellia, The Three Little Pigs, or Hansel and Gretel.
 
@@ -16,11 +19,9 @@ Consider whether the story is descriptive "Oddyseus arrived at the island, and a
 Also think about the narrator. Is it a character in the story, or an omniscient narrator?
 
 
-
 <form action="{% url 'enter_story' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
-<a href="{% url 'index' %}">{{ _("End experiment") }}</a>
+{% endblock %}

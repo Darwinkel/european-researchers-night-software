@@ -1,10 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Demographics (optional)</h1>
+
 As we mentioned, we would like to ask you a few questions about yourself. This is very helpful for scientific research.
 You are free to skip any question you do not want to answer.
 
 <form action="{% url 'demographics' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
-<a href="{% url 'index' %}">{{ _("End experiment") }}</a>
+{% endblock %}

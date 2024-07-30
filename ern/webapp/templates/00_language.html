@@ -1,11 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 {% load i18n %}
 
-Language / taal
+<h1>Welcome!</h1>
 
 <form action="{% url 'set_language' %}" method="post">
     {% csrf_token %}
+    <div class="form-floating">
     <input name="next" type="hidden" value="{% url 'consent' %}">
-    <select name="language">
+    <select class="form-select" name="language" id="language_selector">
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}
@@ -15,5 +20,8 @@ Language / taal
             </option>
         {% endfor %}
     </select>
-    <input type="submit" value="Next / volgende">
+    <label class="form-label" for="language_selector">Language / taal</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Next / volgende</button>
 </form>
+{% endblock %}

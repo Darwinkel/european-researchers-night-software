@@ -7,7 +7,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from nltk.tokenize import sent_tokenize
 
-from .forms import ConsentForm, DemographicsForm, RateReconstructionForm, StoryForm
+from .forms import ConsentForm, DemographicsForm, RateReconstructionForm, StoryForm, ReshuffleForm
 from .llms import reconstruct_with_llm
 from .models import Sample
 
@@ -90,9 +90,6 @@ def enter_story(request: HttpRequest) -> HttpResponse:
 
 def shuffle_story(request: HttpRequest) -> HttpResponse:
     """webapp/index view."""
-    ### !!! NOTE !!! ###
-    # This UX should probably be such that users can drag and drop sentences to shuffle them.
-    # Does this have scientific consequences? The way that humans have to shuffle?
     sample = Sample.objects.get(pk=request.session["sample_id"])
 
     if request.method == "POST":
@@ -110,10 +107,14 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
         sample.save()
         return redirect("rate_human_shuffle_reconstructed")
 
+    else:
+        form = ReshuffleForm()
+
     return render(
         request,
         "03_shuffle_story.html",
         {
+            "form": form,
             "sample_id": sample.id,
             "story_text": sample.story_text,
             "tokenized_story_text": sent_tokenize(sample.story_text),

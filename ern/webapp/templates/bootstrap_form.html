@@ -1,0 +1,13 @@
+<div class="mb-3">
+
+
+{% for field in form %}
+    <div class="form-floating">
+        {{ field.errors }}
+        {{ field }}
+        <label class="form-label" for="{{ field.auto_id }}">{{ field.label }}</label>
+    </div>
+
+{% endfor %}
+</div>
+    <button type="submit" class="btn btn-primary">{{ _("Next") }}</button>

@@ -1,6 +1,10 @@
-<h2>Sample - {{ sample_id }} </h2>
+{% extends "base.html" %}
 
-<h2>Task 3: Rating the model's reconstruction of your shuffle</h2>
+{% block content %}
+
+<h1>Task 3: Rating the model's reconstruction of your shuffle</h1>
+<p class="fw-italic">Sample - {{ sample_id }} </p>
+
 A Large Language Model has attempted to reconstruct your story.
 
 Your task is to rate how well the model has done so on three points:
@@ -19,15 +23,22 @@ The factual accuracy of the story. That is, did the model add or remove informat
 A score of 0 means that the model has fabricated information, while a score of 10 means that the model has not added or removed any information.
 
 <h2>Your original story</h2>
-{{ story_text }}
+<div class="container">
+    <div class="box">
+        {{ story_text }}
+    </div>
+</div>
 
 <h2>The LLM's reconstruction</h2>
-{{ human_reconstructed_story }}
+<div class="container">
+    <div class="box">
+        {{ human_reconstructed_story }}
+    </div>
+</div>
 
 <form action="{% url 'rate_human_shuffle_reconstructed' %}" method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value='{{ _("Next") }}'>
 </form>
 
-<a href="{% url 'index' %}">{{ _("End experiment") }}</a>
+{% endblock %}

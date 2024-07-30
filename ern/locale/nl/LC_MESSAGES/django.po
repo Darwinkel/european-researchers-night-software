@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 09:27+0200\n"
+"POT-Creation-Date: 2024-07-30 14:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,27 +26,19 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: webapp/templates/01_consent.html:57
-#: webapp/templates/01a_enter_demographics.html:7
-#: webapp/templates/02_enter_story.html:23
-#: webapp/templates/03_shuffle_story.html:100
-#: webapp/templates/03_shuffle_story.html:130
-#: webapp/templates/04_rate_human_shuffle_reconstructed.html:30
-#: webapp/templates/05_rate_random_shuffle_reconstructed.html:30
+#: webapp/templates/03_shuffle_story.html:15
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:44
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:44
+#: webapp/templates/bootstrap_form.html:13
+#: webapp/templates/bootstrap_form_checkbox.html:13
 msgid "Next"
 msgstr "Volgende"
 
-#: webapp/templates/01_consent.html:60
-#: webapp/templates/01a_enter_demographics.html:10
-#: webapp/templates/02_enter_story.html:26
-#: webapp/templates/03_shuffle_story.html:133
-#: webapp/templates/04_rate_human_shuffle_reconstructed.html:33
-#: webapp/templates/05_rate_random_shuffle_reconstructed.html:33
+#: webapp/templates/base.html:18
 msgid "End experiment"
 msgstr "Stop met het experiment"
 
-#: webapp/templates/06_thank_you.html:6
 #, fuzzy
-#| msgid "End experiment"
-msgid "Restart experiment"
-msgstr "Stop met het experiment"
+#~| msgid "End experiment"
+#~ msgid "Restart experiment"
+#~ msgstr "Stop met het experiment"

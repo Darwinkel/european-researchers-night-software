@@ -1,6 +1,11 @@
-<h2>Thank you!</h2>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Thank you!</h2>
 This concludes the experiment. Thank you for participating!
 You are very much encouraged to redo the experiment as much as you like, provided all your stories are somewhat unique.
 The more stories, the better!
+    <br>
 
-<a href="{% url 'index' %}">{{ _("Restart experiment") }}</a>
+{% endblock %}
