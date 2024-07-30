@@ -2,7 +2,10 @@
 
 **Can you out-smart AI?**
 
-
+# To-do
+- [ ] Adapt to use CIT LLM endpoint
+- [ ] Needs HF API key for LLama3
+- [ ] Complete Dutch translations
 
 ## Goal
 
