@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 14:37+0200\n"
+"POT-Creation-Date: 2024-07-30 16:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,12 +27,12 @@ msgid "English"
 msgstr ""
 
 #: webapp/templates/03_shuffle_story.html:12
-#: webapp/templates/bootstrap_form.html:13
-#: webapp/templates/bootstrap_form_checkbox.html:13
+#: webapp/templates/bootstrap_form.html:10
+#: webapp/templates/bootstrap_form_checkbox.html:10
 msgid "Next"
 msgstr "Volgende"
 
-#: webapp/templates/base.html:18
+#: webapp/templates/base.html:23
 msgid "End experiment"
 msgstr "Stop met het experiment"
 

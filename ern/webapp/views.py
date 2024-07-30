@@ -7,20 +7,20 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from nltk.tokenize import sent_tokenize
 
-from .forms import ConsentForm, DemographicsForm, RateReconstructionForm, StoryForm, ReshuffleForm
+from .forms import ConsentForm, DemographicsForm, RateReconstructionForm, ReshuffleForm, StoryForm
 from .llms import reconstruct_with_llm
 from .models import Sample
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Index/default switch language view."""
     if "sample_id" in request.session:
         del request.session["sample_id"]
     return render(request, "00_language.html")
 
 
 def consent(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Consent view."""
     if request.method == "POST":
         form = ConsentForm(request.POST)
 
@@ -39,7 +39,7 @@ def consent(request: HttpRequest) -> HttpResponse:
 
 
 def demographics(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Demographics view."""
     if request.method == "POST":
         form = DemographicsForm(request.POST)
 
@@ -66,7 +66,7 @@ def demographics(request: HttpRequest) -> HttpResponse:
 
 
 def enter_story(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Enter story view."""
     sample = Sample.objects.get(pk=request.session["sample_id"])
     if request.method == "POST":
         form = StoryForm(request.POST)
@@ -89,16 +89,16 @@ def enter_story(request: HttpRequest) -> HttpResponse:
 
 
 def shuffle_story(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Shuffle story view."""
     sample = Sample.objects.get(pk=request.session["sample_id"])
 
     if request.method == "POST":
         print(request.POST)
         sample.human_shuffled_story = str(request.POST.getlist("dragdrop_list"))
-        sample.human_shuffled_story_difficulty = request.POST.get("difficulty")
+        sample.human_shuffled_story_difficulty = int(request.POST.get("difficulty"))  # type: ignore[arg-type]
 
         tokenized_story = sent_tokenize(sample.story_text)
-        sample.random_shuffled_story = random.sample(tokenized_story, len(tokenized_story))
+        sample.random_shuffled_story = random.sample(tokenized_story, len(tokenized_story))  # type: ignore[assignment]
 
         sample.llm_reconstructed_human_story, sample.llm_reconstructed_random_story = reconstruct_with_llm(
             request.LANGUAGE_CODE, sample.human_shuffled_story, sample.random_shuffled_story
@@ -107,8 +107,7 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
         sample.save()
         return redirect("rate_human_shuffle_reconstructed")
 
-    else:
-        form = ReshuffleForm()
+    form = ReshuffleForm()
 
     return render(
         request,
@@ -123,7 +122,7 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
 
 
 def rate_human_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Rate reconstructed human shuffle view."""
     sample = Sample.objects.get(pk=request.session["sample_id"])
 
     if request.method == "POST":
@@ -151,7 +150,7 @@ def rate_human_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
 
 
 def rate_random_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Rate reconstructed random shuffle view."""
     sample = Sample.objects.get(pk=request.session["sample_id"])
 
     if request.method == "POST":
@@ -179,5 +178,5 @@ def rate_random_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
 
 
 def thank_you(request: HttpRequest) -> HttpResponse:
-    """webapp/index view."""
+    """Thank-you view view."""
     return render(request, "06_thank_you.html")

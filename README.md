@@ -6,6 +6,7 @@
 - [ ] Adapt to use CIT LLM endpoint
 - [ ] Needs HF API key for LLama3
 - [ ] Complete Dutch translations
+- [ ] How long should the story input/output be?
 
 ## Goal
 

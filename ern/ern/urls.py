@@ -24,7 +24,7 @@ from django.urls import include, path
 
 urlpatterns = [path("i18n/", include("django.conf.urls.i18n"))]
 
-urlpatterns += i18n_patterns(
+urlpatterns += i18n_patterns(  # type: ignore[arg-type]
     path("", include("webapp.urls")),
     path("admin/", admin.site.urls),
 )

@@ -3,29 +3,27 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
-SEX_ENUM = {
-    "P": "Prefer not to say",
-    "O": "Other/Unspecified",
-    "M": "Male",
-    "F": "Female",
-}
+SEX_ENUM = [
+    ("P", "Prefer not to say"),
+    ("O", "Other/Unspecified"),
+    ("M", "Male"),
+    ("F", "Female"),
+]
 
-LANG_ENUM = {
-    "nl": "Nederlands",
-    "en": "English",
-}
+LANG_ENUM = [
+    ("nl", "Nederlands"),
+    ("en", "English"),
+]
 
 
-class Sample(models.Model):
+class Sample(models.Model):  # noqa: DJ008
     """Primary model for participant data."""
 
     timestamp = models.DateTimeField(auto_now_add=True)
 
     language = models.CharField(choices=LANG_ENUM, default="nl", max_length=2)
     sex = models.CharField(choices=SEX_ENUM, default="P", max_length=1)
-    age = models.IntegerField(
-        default=None, blank=True, null=True
-    )  # validators=[MinValueValidator(12), MaxValueValidator(99)]
+    age = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(99)])
 
     story_text = models.CharField(max_length=500)
     human_shuffled_story = models.CharField(max_length=500)

@@ -5,7 +5,7 @@ check:
 	ruff check ern
 
 typing:
-	mypy ern/*.py
+	mypy .
 
 quality:
 	make format
