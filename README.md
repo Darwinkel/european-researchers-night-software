@@ -61,3 +61,16 @@ Every page has a "Stoppen met het experiment" button, which redirects to the fir
 Sample
 
 Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstructed human shuffle | LLM reconstructed random shuffle | Rating of LLM reconstructed human shuffle | Rating of LLM reconstructred random shuffle
+
+
+## Todo
+
+- LLM prompts
+- LLM model (Phi3; Mistral7B). If we do multiple, randomly select it
+- Integration with CIT
+- Flashy first page (What's the story with LLM's? Come play!) -> Give me design
+- Text en/nl review (deploy to server)
+- Deploy stack to server (ern.darwinkel.net)
+
+On Friday:
+- Play around with sane model and prompt defaults

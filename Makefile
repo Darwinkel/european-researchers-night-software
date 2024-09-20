@@ -18,6 +18,18 @@ run:
 	cd ern && django-admin compilemessages
 	cd ern && python manage.py runserver 0.0.0.0:8000
 
+docker-build:
+	poetry export -f requirements.txt --output build-requirements.txt
+	docker compose build
+	rm build-requirements.txt
+
+docker-migrate:
+	docker compose run --rm django-ern python manage.py migrate
+	docker compose run --rm django-ern python manage.py createsuperuser --username admin --email admin@localhost
+
+docker-run:
+	docker compose up -d && docker compose logs -f
+
 deploy-run:
 	rsync -avx --delete -e 'ssh -p 22322' --progress ./ jetbrains@penthouse.darwinkel.net:~/ern
 	ssh -t jetbrains@penthouse.darwinkel.net -p 22322 "cd ~/ern && poetry run make run"

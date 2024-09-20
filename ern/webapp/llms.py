@@ -1,6 +1,6 @@
 """Reconstruct text using an open-source HuggingFace language model."""
 
-from transformers import pipeline
+#from transformers import pipeline
 
 
 def dutch_chat(sentences: str) -> list[dict[str, str]]:
@@ -49,15 +49,19 @@ def reconstruct_with_llm(lang: str, human_shuffled_story: str, random_shuffled_s
         reconstruct_human_shuffle_chat = english_chat(human_shuffled_story)
         reconstruct_random_shuffle_chat = english_chat(random_shuffled_story)
 
-    chatbot = pipeline("text-generation", model=model, model_kwargs={"load_in_4bit": True}, device_map="auto")
+    #chatbot = pipeline("text-generation", model=model, model_kwargs={"load_in_4bit": True}, device_map="auto")
 
-    llm_reconstructed_human_story = chatbot(reconstruct_human_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
-        -1
-    ]["content"]
+    #llm_reconstructed_human_story = chatbot(reconstruct_human_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
+    #    -1
+    #]["content"]
 
-    llm_reconstructed_random_story = chatbot(reconstruct_random_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
-        -1
-    ]["content"]
+    #llm_reconstructed_random_story = chatbot(reconstruct_random_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
+    #    -1
+    #]["content"]
 
-    del chatbot
+    #del chatbot
+
+    llm_reconstructed_human_story = human_shuffled_story
+    llm_reconstructed_random_story = random_shuffled_story
+
     return llm_reconstructed_human_story, llm_reconstructed_random_story
