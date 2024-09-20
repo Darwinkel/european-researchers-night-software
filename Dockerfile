@@ -11,10 +11,10 @@ RUN pip install --no-cache-dir -r build-requirements.txt
 
 USER ern
 
-RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader punkt punkt_tab
 
 COPY ern ./ern
 WORKDIR /usr/src/app/ern
 
 EXPOSE 8000
-CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000", "--insecure", "--noreload"]

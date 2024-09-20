@@ -25,14 +25,14 @@ class Sample(models.Model):  # noqa: DJ008
     sex = models.CharField(choices=SEX_ENUM, default="P", max_length=1)
     age = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(99)])
 
-    story_text = models.CharField(max_length=500)
-    human_shuffled_story = models.CharField(max_length=500)
+    story_text = models.CharField(max_length=2000)
+    human_shuffled_story = models.CharField(max_length=2500)
     human_shuffled_story_difficulty = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
-    random_shuffled_story = models.CharField(max_length=500)
+    random_shuffled_story = models.CharField(max_length=2500)
 
-    llm_reconstructed_human_story = models.CharField(default="", max_length=500)
+    llm_reconstructed_human_story = models.CharField(default="", max_length=2500)
     rating_reconstructed_human_fluency = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
@@ -43,7 +43,7 @@ class Sample(models.Model):  # noqa: DJ008
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
 
-    llm_reconstructed_random_story = models.CharField(default="", max_length=500)
+    llm_reconstructed_random_story = models.CharField(default="", max_length=2500)
     rating_reconstructed_random_fluency = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )

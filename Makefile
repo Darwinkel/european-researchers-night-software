@@ -30,6 +30,9 @@ docker-migrate:
 docker-run:
 	docker compose up -d && docker compose logs -f
 
+docker-deploy:
+	docker save european-researchers-night-software-django-ern | ssh -C root@darwinkel.net -p 22322 docker load
+
 deploy-run:
 	rsync -avx --delete -e 'ssh -p 22322' --progress ./ jetbrains@penthouse.darwinkel.net:~/ern
 	ssh -t jetbrains@penthouse.darwinkel.net -p 22322 "cd ~/ern && poetry run make run"
