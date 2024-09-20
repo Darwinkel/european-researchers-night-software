@@ -8,15 +8,15 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
-django = "^5.0.7"
-ruff = "^0.5.1"
-mypy = "^1.10.1"
-nltk = "^3.8.1"
+django = "^5.0"
+ruff = "^0.6"
+mypy = "^1.10"
+nltk = "^3.9"
 #transformers = "^4.43.3"
 #torch = "^2.4.0"
 #accelerate = "^0.33.0"
 #bitsandbytes = "^0.43.2"
-setuptools = "^72.1.0"
+setuptools = "^75.1"
 django-stubs = {extras = ["compatible-mypy"], version = "^5.0.4"}
 
 
