@@ -9,6 +9,9 @@ services:
       - no-new-privileges:true
     volumes:
       - db:/usr/src/app/db/
-
+    environment:
+      DEBUG: "False"
+      OPENAPI_HOST: "http://host.docker.internal"
+      ALLOWED_HOST: "https://ern.darwinkel.net"
 volumes:
   db:

@@ -15,6 +15,7 @@ nltk = "^3.9"
 setuptools = "^75.1"
 django-stubs = {extras = ["compatible-mypy"], version = "^5.1"}
 openai = "^1.50"
+django-environ = "^0.11.2"
 
 
 [build-system]

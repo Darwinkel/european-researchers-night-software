@@ -12,10 +12,16 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+import environ
 from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+env = environ.Env(DEBUG=(bool, False), OPENAPI_HOST=(str, "http://localhost"), ALLOWED_HOST=(str, "http://localhost"))
+
+environ.Env.read_env(BASE_DIR / ".env")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -24,11 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = "%pj364s^&0o8w$_1e@c-u5ddd5%utxpfgzf47pxko5ut5%utxpf5%utxpf5%utxpf5%utxpf5%utxpft^6)"  # noqa: S105
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
-CORS_ALLOWED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000", "https://ern.darwinkel.net"]
-CSRF_TRUSTED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000", "https://ern.darwinkel.net"]
+CORS_ALLOWED_ORIGINS = [env("ALLOWED_HOST")]
+CSRF_TRUSTED_ORIGINS = [env("ALLOWED_HOST")]
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True

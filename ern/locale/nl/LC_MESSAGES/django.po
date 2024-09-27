@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 15:02+0200\n"
+"POT-Creation-Date: 2024-09-27 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ern/settings.py:113
+#: ern/settings.py:123
 msgid "Nederlands"
 msgstr ""
 
-#: ern/settings.py:114
+#: ern/settings.py:124
 msgid "English"
 msgstr ""
 
-#: webapp/templates/01a_why.html:13 webapp/templates/01b_what.html:16
+#: webapp/templates/01a_why.html:12 webapp/templates/01b_what.html:16
 #: webapp/templates/01c_how.html:20 webapp/templates/01d_other.html:17
 #: webapp/templates/03_shuffle_story.html:12
 #: webapp/templates/04a_next_reconstruction.html:7
