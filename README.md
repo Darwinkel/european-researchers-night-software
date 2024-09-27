@@ -75,6 +75,8 @@ Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstru
 On Friday:
 - Play around with sane model and prompt defaults
 - Implement Rik's feedback
+- Create nice landing page
+- Translate into Dutch
 
 Store tokenized or non-tokenized story and LLM output?
 

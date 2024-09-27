@@ -36,7 +36,6 @@ def english_chat(sentences: str) -> list[dict[str, str]]:
 
 def reconstruct_with_llm(lang: str, human_shuffled_story: str, random_shuffled_story: str) -> tuple[str, str]:
     """Reconstruct text using a language model."""
-
     if lang == "nl":
         model = "BramVanroy/GEITje-7B-ultra"
         client = OpenAI(base_url="http://localhost:8891/v1", api_key="asdf")
@@ -63,5 +62,7 @@ def reconstruct_with_llm(lang: str, human_shuffled_story: str, random_shuffled_s
     print(reconstruct_random_shuffle_chat)
     print(llm_reconstructed_random_story)
 
-    return (llm_reconstructed_human_story.choices[0].message.content,
-            llm_reconstructed_random_story.choices[0].message.content)
+    return (
+        llm_reconstructed_human_story.choices[0].message.content,
+        llm_reconstructed_random_story.choices[0].message.content,
+    )

@@ -29,7 +29,7 @@ class ConsentForm(forms.Form):
     q4 = forms.BooleanField(
         widget=BootstrapCheckboxInput(),
         required=True,
-        label="That the data collected through the games that I provide will be deposited in DataverseNL "
+        label="I understand that the data collected through the stories that I provide will be deposited in DataverseNL "
         "so that it can be used for future research and learning.",
     )
     q5 = forms.BooleanField(

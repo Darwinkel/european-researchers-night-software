@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>The next task is very similar to the one you just did, except that the story was shuffled randomly instead of by you.</p>
+
+<a class="btn btn-primary" role=button href="{% url 'rate_random_shuffle_reconstructed' %}">{{ _("Next") }}</a>
+
+{% endblock %}

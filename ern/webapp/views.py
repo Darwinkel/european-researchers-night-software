@@ -19,6 +19,31 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "00_language.html")
 
 
+def why(request: HttpRequest) -> HttpResponse:
+    """Thank-you view view."""
+    return render(request, "01a_why.html")
+
+
+def what(request: HttpRequest) -> HttpResponse:
+    """Thank-you view view."""
+    return render(request, "01b_what.html")
+
+
+def how(request: HttpRequest) -> HttpResponse:
+    """Thank-you view view."""
+    return render(request, "01c_how.html")
+
+
+def other(request: HttpRequest) -> HttpResponse:
+    """Thank-you view view."""
+    return render(request, "01d_other.html")
+
+
+def next_reconstruction(request: HttpRequest) -> HttpResponse:
+    """Thank-you view view."""
+    return render(request, "04a_next_reconstruction.html")
+
+
 def consent(request: HttpRequest) -> HttpResponse:
     """Consent view."""
     if request.method == "POST":
@@ -31,7 +56,7 @@ def consent(request: HttpRequest) -> HttpResponse:
         form = ConsentForm()
     return render(
         request,
-        "01_consent.html",
+        "01e_consent.html",
         {
             "form": form,
         },
@@ -58,7 +83,7 @@ def demographics(request: HttpRequest) -> HttpResponse:
         form = DemographicsForm()
     return render(
         request,
-        "01a_enter_demographics.html",
+        "02a_enter_demographics.html",
         {
             "form": form,
         },
@@ -132,7 +157,7 @@ def rate_human_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
             sample.rating_reconstructed_human_flow = form.cleaned_data["flow"]
             sample.rating_reconstructed_human_accuracy = form.cleaned_data["accuracy"]
             sample.save()
-            return redirect("rate_random_shuffle_reconstructed")
+            return redirect("next_reconstruction")
 
     else:
         form = RateReconstructionForm()

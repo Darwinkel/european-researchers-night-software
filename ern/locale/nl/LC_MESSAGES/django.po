@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 11:09+0200\n"
+"POT-Creation-Date: 2024-09-27 15:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,10 @@ msgstr ""
 msgid "English"
 msgstr ""
 
+#: webapp/templates/01a_why.html:13 webapp/templates/01b_what.html:16
+#: webapp/templates/01c_how.html:20 webapp/templates/01d_other.html:17
 #: webapp/templates/03_shuffle_story.html:12
+#: webapp/templates/04a_next_reconstruction.html:7
 #: webapp/templates/bootstrap_form.html:10
 #: webapp/templates/bootstrap_form_checkbox.html:10
 msgid "Next"
