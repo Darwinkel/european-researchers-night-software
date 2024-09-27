@@ -16,7 +16,7 @@ def dutch_chat(sentences: str) -> list[dict[str, str]]:
         {
             "role": "user",
             "content": f"Herschik de volgende lijst door de zinnen te verplaatsen, "
-            f"waarbij je de zinnen zelf niet veranderd, geen extra opmerkingen maakt, en geen een speciale tekens of opsommingen gebruikt: {sentences}",
+            f"waarbij je de zinnen zelf niet veranderd, geen extra opmerkingen maakt, geen code schrijft, en geen speciale tekens of opsommingen gebruikt: {sentences}",
         },
     ]
 
@@ -31,7 +31,7 @@ def english_chat(sentences: str) -> list[dict[str, str]]:
         {
             "role": "user",
             "content": f"Rearrange the following list by moving the sentences, "
-            f"where you do not modify the sentences themselves, don't use special characters, and don't make any additional comments or enumerations: {sentences}",
+            f"where you do not modify the sentences themselves, don't use special characters, don't write code, and don't make any additional comments or enumerations: {sentences}",
         },
     ]
 

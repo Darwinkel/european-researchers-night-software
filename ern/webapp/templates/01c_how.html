@@ -2,20 +2,17 @@
 
 {% block content %}
 
-<h2>How will we treat your data?</h2>
+<h2>{{ _("How will we treat your data?") }}</h2>
 
-<p>The answers to the game will be used to create new datasets for training and testing LLMs in Dutch and English. The data can in no way be linked back to you personally.
-</p>
+<p>{{ _("The answers to the game will be used to create new datasets for training and testing LLMs in Dutch and English. The data can in no way be linked back to you personally.") }}</p>
 
-<p>We will collect only two sociodemographic factors: age and gender. The disclosure of this information is voluntary. You will be asked to provide this information at the beginning of the experiment, but can skip this step.</p>
+<p>{{ _("We will collect only two sociodemographic factors: age and gender. The disclosure of this information is voluntary. You will be asked to provide this information at the beginning of the experiment, but can skip this step.") }}</p>
 
-<p>The two socio-demographics data points you decide to disclose will only be made available in an aggregated form. The entire data collection process is anonymous.
-</p>
+<p>{{ _("The two socio-demographics data points you decide to disclose will only be made available in an aggregated form. The entire data collection process is anonymous.") }}</p>
 
-<p>The data will be processed by researchers at the Computational Linguistics Group of the Faculty of Arts under the coordination of Prof. Malvina Nissim.
-</p>
+<p>{{ _("The data will be processed by researchers at the Computational Linguistics Group of the Faculty of Arts under the coordination of Prof. Malvina Nissim.") }}</p>
 
-<p>The sociodemographic data will serve to offer other researchers additional insights into who has contributed to the creation of the data, offering information on potential bias.</p>
+<p>{{ _("The sociodemographic data will serve to offer other researchers additional insights into who has contributed to the creation of the data, offering information on potential bias.") }}</p>
 
 <a class="btn btn-primary" role=button href="{% url 'other' %}">{{ _("Next") }}</a>
 

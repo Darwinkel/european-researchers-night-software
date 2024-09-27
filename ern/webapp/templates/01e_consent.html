@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<h2>Consent</h2>
+<h2>{{ _("Consent") }}</h2>
 
-<p>Before we can begin, you must consent to participate in this experiment. Please read the following information and click the "Next" button to continue.</p>
+<p>{{ _("Before we can begin, you must consent to participate in this experiment. Please read the following information and click the 'Next' button to continue.") }}</p>
 
 <form action="{% url 'consent' %}" method="post">
     {% csrf_token %}

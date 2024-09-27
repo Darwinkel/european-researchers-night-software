@@ -2,20 +2,15 @@
 
 {% block content %}
 
-<h1>Task 2: Shuffling your story</h1>
+<h1>{{ _("Task 2: Shuffling your story") }}</h1>
 <p class="fw-italic">Sample - {{ sample_id }} </p>
 
-<p>We have automatically split your story into sentences.
-You can drag and drop sentences to change their order.
-You can select a sentence by clicking and holding the left mouse button.
-Releasing the left mouse button while hovering over another sentence switches their position.
-When you are happy with your shuffle, rate the difficulty and press the {{ _("Next") }} button.</p>
+<p>{{ _("We have automatically split your story into sentences. You can drag and drop sentences to change their order. You can select a sentence by clicking and holding the left mouse button. Releasing the left mouse button while hovering over another sentence switches their position. When you are happy with your shuffle, rate the difficulty and press the 'Next' button.") }}</p>
 
-<h3>Reshuffling difficulty</h3>
-<p>Before submitting your story, you should think about how hard it is to reconstruct the story.
-You can do this on a scale from 0 to 10, where 0 means trivial (perhaps even unchanged) and 10 means that all sentence have been totally randomized in a way that there is no discernible logical ordering.</p>
+<h3>{{ _("Reshuffling difficulty") }}</h3>
+<p>{{ _("Before submitting your story, you should think about how hard it is to reconstruct the story. You can do this on a scale from 0 to 10, where 0 means trivial (perhaps even unchanged) and 10 means that all sentence have been totally randomized in a way that there is no discernible logical ordering.") }}</p>
 
-<h2>Your original story</h2>
+<h2>{{ _("Your original story") }}</h2>
 
 <div class="container">
         {% for sentence in tokenized_story_text %}
@@ -23,7 +18,7 @@ You can do this on a scale from 0 to 10, where 0 means trivial (perhaps even unc
         {% endfor %}
 </div>
 <br>
-<h2>Now shuffle this story yourself:</h2>
+<h2>{{ _("Now shuffle this story yourself:") }}</h2>
 
 <form action="{% url 'shuffle_story' %}" method="post">
     {% csrf_token %}

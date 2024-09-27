@@ -2,10 +2,9 @@
 
 {% block content %}
 
-<h1>Demographics (optional)</h1>
+<h1>{{ _("Demographics (optional)") }}</h1>
 
-<p>As we mentioned, we would like to ask you a few questions about yourself. This is very helpful for scientific research.
-You are free to skip any question you do not want to answer.</p>
+<p>{{ _("As we mentioned, we would like to ask you a few questions about yourself. This is very helpful for scientific research. You are free to skip any question you do not want to answer.") }}</p>
 
 <form action="{% url 'demographics' %}" method="post">
     {% csrf_token %}

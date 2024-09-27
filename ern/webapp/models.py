@@ -2,12 +2,13 @@
 
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.utils.translation import gettext as _
 
 SEX_ENUM = [
-    ("P", "Prefer not to say"),
-    ("O", "Other/Unspecified"),
-    ("M", "Male"),
-    ("F", "Female"),
+    ("P", _("Prefer not to say")),
+    ("O", _("Other/Unspecified")),
+    ("M", _("Male")),
+    ("F", _("Female")),
 ]
 
 LANG_ENUM = [

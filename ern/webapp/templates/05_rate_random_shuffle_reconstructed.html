@@ -2,32 +2,26 @@
 
 {% block content %}
 
-<h1>Task 4: Rating the model's reconstruction of the system's random shuffle</h1>
+<h1>{{ _("Task 4: Rating the model's reconstruction of the system's random shuffle") }}</h1>
 <p class="fw-italic">Sample - {{ sample_id }} </p>
 
-<p>This task is identical to the previous one, except that the story has been shuffled completely randomly by the system.
+<p>{{ _("This task is identical to the previous one, except that the story has been shuffled completely randomly by the system. Your task is to rate how well the model has reconstructed the story on the same two points as before:") }}</p>
 
-Your task is to rate how well the model has reconstructed the story on the same two points as before:</p>
+<h4>{{ _("Reconstruction quality") }}</h4>
+<p>{{ _("How well has the model reconstructed the story? A score of 0 means that the model almost completely deviates from the original story in terms of factuality, writing, and ordering. A score of 10 means that the model has accurately reconstructed the writing and ordering of the original story.") }}</p>
 
-<h4>Reconstruction quality</h4>
-<p>How well has the model reconstructed the story?
-A score of 0 means that the model almost completely deviates from the original story in terms of factuality, writing, and ordering.
-A score of 10 means that the model has accurately reconstructed the writing and ordering of the original story.</p>
+<h4>{{ _("Narrative quality") }}</h4>
+<p>{{ _("It is possible that the model rewrote (some parts of) the story. Regardless of how well it reconstructs the original, how readable and coherent is the model output? A score of 0 means that the model has produced garbage, unintelligible output. A score of 10 means that the model has written a fluent and coherent story.") }}</p>
 
-<h4>Narrative quality</h4>
-<p>It is possible that the model rewrote (some parts of) the story. Regardless of how well it reconstructs the original, how readable and coherent is the model output?
-A score of 0 means that the model has produced garbage, unintelligible output.
-A score of 10 means that the model has written a fluent and coherent story.</p>
-
-<h2>Your original story</h2>
+<h2>{{ _("Your original story") }}</h2>
 <div class="container">
         {% for sentence in tokenized_story_text %}
         <div class="box">{{ sentence }}</div>
         {% endfor %}
 </div>
 <br>
-<h2>The LLM's reconstruction</h2>
-<p>Note that the LLM may make some formatting errors. This is expected and should not be rated negatively.</p>
+<h2>{{ _("The LLM's reconstruction") }}</h2>
+<p>{{ _("Note that the LLM may make some formatting errors. This is expected and should not be rated negatively.") }}</p>
 <div class="container">
         {% for sentence in tokenized_random_reconstructed_story %}
         <div class="box">{{ sentence }}</div>

@@ -2,17 +2,13 @@
 
 {% block content %}
 
-<h2>Do you have to participate in this study?</h2>
-<p>Participation in this study is voluntary. If you decide not to participate, you do not need to explain why, and there will be no negative consequences for you.
-You have the right to withdraw from this study at any time until the first scientific output of the study has been submitted for publication.</p>
+<h2>{{ _("Do you have to participate in this study?") }}</h2>
+<p>{{ _("Participation in this study is voluntary. If you decide not to participate, you do not need to explain why, and there will be no negative consequences for you. You have the right to withdraw from this study at any time until the first scientific output of the study has been submitted for publication.") }}</p>
 
-<h2>What else do you need to know?</h2>
-<p>We encourage you to share any questions or comments you have about the study.
-You can ask your questions now, during, or after the study.
-You can do so by speaking with one of the researchers present or by emailing the research team
-(m.nissim@rug.nl).
+<h2>{{ _("What else do you need to know?") }}</h2>
+<p>{{ _("We encourage you to share any questions or comments you have about the study. You can ask your questions now, during, or after the study. You can do so by speaking with one of the researchers present or by emailing the research team (m.nissim@rug.nl).") }}</p>
 
-Questions about your rights as a research participant or about the conduct of the research team can be asked to the Research Ethical Review Committee (CETO) of the Faculties of Arts, Philosophy, and Science &amp; Engineering of the University of Groningen: ceto@rug.nl.</p>
+<p>{{ _("Questions about your rights as a research participant or about the conduct of the research team can be asked to the Research Ethical Review Committee (CETO) of the Faculties of Arts, Philosophy, and Science &amp; Engineering of the University of Groningen: ceto@rug.nl.") }}</p>
 
 <a class="btn btn-primary" role=button href="{% url 'consent' %}">{{ _("Next") }}</a>
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 15:46+0200\n"
+"POT-Creation-Date: 2024-09-27 18:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,14 +26,387 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: webapp/templates/01a_why.html:12 webapp/templates/01b_what.html:16
-#: webapp/templates/01c_how.html:20 webapp/templates/01d_other.html:17
-#: webapp/templates/03_shuffle_story.html:12
+#: webapp/forms.py:16
+msgid ""
+"I have read and understood the information about the research project and I "
+"voluntarily agree to participate."
+msgstr ""
+
+#: webapp/forms.py:21
+msgid "I understand that I can withdraw at any time, without giving a reason."
+msgstr ""
+
+#: webapp/forms.py:26
+msgid ""
+"I understand that taking part in the study involves interacting with an AI "
+"agent."
+msgstr ""
+
+#: webapp/forms.py:31
+msgid ""
+"I understand that the data collected through the stories that I provide will "
+"be deposited in DataverseNL so that it can be used for future research and "
+"learning."
+msgstr ""
+
+#: webapp/forms.py:36
+msgid ""
+"I know whom to contact in case I have questions and I have been informed "
+"about my rights."
+msgstr ""
+
+#: webapp/forms.py:47
+msgid "Gender"
+msgstr ""
+
+#: webapp/forms.py:55
+msgid "Age (set to '0' if you prefer not to say)"
+msgstr ""
+
+#: webapp/forms.py:64
+msgid "Story"
+msgstr ""
+
+#: webapp/forms.py:76
+msgid "Reconstruction difficulty"
+msgstr ""
+
+#: webapp/forms.py:90
+msgid "How good is this reconstruction?"
+msgstr ""
+
+#: webapp/forms.py:98
+msgid ""
+"The story might be different from the original. Do you like this particular "
+"story now?"
+msgstr ""
+
+#: webapp/models.py:8
+msgid "Prefer not to say"
+msgstr ""
+
+#: webapp/models.py:9
+msgid "Other/Unspecified"
+msgstr ""
+
+#: webapp/models.py:10
+msgid "Male"
+msgstr ""
+
+#: webapp/models.py:11
+msgid "Female"
+msgstr ""
+
+#: webapp/templates/01a_why.html:5
+msgid "Why this research?"
+msgstr ""
+
+#: webapp/templates/01a_why.html:7
+msgid "Thank you for participating in this experiment!"
+msgstr ""
+
+#: webapp/templates/01a_why.html:9
+msgid ""
+"You will help the Computational Linguistics Group at the RuG to collect data "
+"to train and test the next generation of Large Language Models. Thanks in "
+"advance! Your contribution will support the creation of challenging and high-"
+"quality data. By participating in this data collection effort you can "
+"contribute to better, safer, and trustworthy AI technologies for Dutch and "
+"English."
+msgstr ""
+
+#: webapp/templates/01a_why.html:11 webapp/templates/01b_what.html:16
+#: webapp/templates/01c_how.html:17 webapp/templates/01d_other.html:13
 #: webapp/templates/04a_next_reconstruction.html:7
 #: webapp/templates/bootstrap_form.html:10
 #: webapp/templates/bootstrap_form_checkbox.html:10
 msgid "Next"
 msgstr "Volgende"
+
+#: webapp/templates/01b_what.html:5
+msgid "What do we ask of you during the research?"
+msgstr ""
+
+#: webapp/templates/01b_what.html:8
+msgid "You are asked to do five tasks as part of a game."
+msgstr ""
+
+#: webapp/templates/01b_what.html:9
+msgid "You have to come up with a story between 5 and 20 sentences."
+msgstr ""
+
+#: webapp/templates/01b_what.html:10
+msgid "You are asked to change the order of the sentences of the story"
+msgstr ""
+
+#: webapp/templates/01b_what.html:11
+msgid "You estimate the difficulty of reconstructing the original story"
+msgstr ""
+
+#: webapp/templates/01b_what.html:12
+msgid "You are asked to rate the model's reconstruction of your reordering"
+msgstr ""
+
+#: webapp/templates/01b_what.html:13
+msgid "You are asked to rate the model's reconstruction of a random reordering"
+msgstr ""
+
+#: webapp/templates/01c_how.html:5
+msgid "How will we treat your data?"
+msgstr ""
+
+#: webapp/templates/01c_how.html:7
+msgid ""
+"The answers to the game will be used to create new datasets for training and "
+"testing LLMs in Dutch and English. The data can in no way be linked back to "
+"you personally."
+msgstr ""
+
+#: webapp/templates/01c_how.html:9
+msgid ""
+"We will collect only two sociodemographic factors: age and gender. The "
+"disclosure of this information is voluntary. You will be asked to provide "
+"this information at the beginning of the experiment, but can skip this step."
+msgstr ""
+
+#: webapp/templates/01c_how.html:11
+msgid ""
+"The two socio-demographics data points you decide to disclose will only be "
+"made available in an aggregated form. The entire data collection process is "
+"anonymous."
+msgstr ""
+
+#: webapp/templates/01c_how.html:13
+msgid ""
+"The data will be processed by researchers at the Computational Linguistics "
+"Group of the Faculty of Arts under the coordination of Prof. Malvina Nissim."
+msgstr ""
+
+#: webapp/templates/01c_how.html:15
+msgid ""
+"The sociodemographic data will serve to offer other researchers additional "
+"insights into who has contributed to the creation of the data, offering "
+"information on potential bias."
+msgstr ""
+
+#: webapp/templates/01d_other.html:5
+msgid "Do you have to participate in this study?"
+msgstr ""
+
+#: webapp/templates/01d_other.html:6
+msgid ""
+"Participation in this study is voluntary. If you decide not to participate, "
+"you do not need to explain why, and there will be no negative consequences "
+"for you. You have the right to withdraw from this study at any time until "
+"the first scientific output of the study has been submitted for publication."
+msgstr ""
+
+#: webapp/templates/01d_other.html:8
+msgid "What else do you need to know?"
+msgstr ""
+
+#: webapp/templates/01d_other.html:9
+msgid ""
+"We encourage you to share any questions or comments you have about the "
+"study. You can ask your questions now, during, or after the study. You can "
+"do so by speaking with one of the researchers present or by emailing the "
+"research team (m.nissim@rug.nl)."
+msgstr ""
+
+#: webapp/templates/01d_other.html:11
+msgid ""
+"Questions about your rights as a research participant or about the conduct "
+"of the research team can be asked to the Research Ethical Review Committee "
+"(CETO) of the Faculties of Arts, Philosophy, and Science &amp; Engineering "
+"of the University of Groningen: ceto@rug.nl."
+msgstr ""
+
+#: webapp/templates/01e_consent.html:5
+msgid "Consent"
+msgstr ""
+
+#: webapp/templates/01e_consent.html:7
+msgid ""
+"Before we can begin, you must consent to participate in this experiment. "
+"Please read the following information and click the 'Next' button to "
+"continue."
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:5
+msgid "Task 1: Coming up with a story"
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:8
+msgid ""
+"You have to come up with a short story (between 5 and 20 sentences) that "
+"would be appropriate for children. It should be a new story, but it can be "
+"similar in style and form to existing ones such as Cinderella, The Three "
+"Little Pigs, or Hansel and Gretel. You could also, for example, write about "
+"how you scored the winning goal in the World Cup finals"
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:10
+msgid "Your story can be about anything!"
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:12
+msgid ""
+"On the next page, the story will be split into sentences. You will then be "
+"asked to shuffle the sentences and estimate the difficulty of reconstructing "
+"the story."
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:14
+msgid "Examples of themes"
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:15
+msgid ""
+"Suggestions for themes for these kinds of stories include animals, "
+"adventures, friendship, family, school, etc. It is up to you whether the "
+"story includes magical or fantastic elements. Some stories have a take-home "
+"message or moral, but this is not necessary."
+msgstr ""
+
+#: webapp/templates/02_enter_story.html:17
+msgid ""
+"Please use appropriate punctuation between sentences to make sure they are "
+"processed correctly by the system."
+msgstr ""
+
+#: webapp/templates/02a_enter_demographics.html:5
+msgid "Demographics (optional)"
+msgstr ""
+
+#: webapp/templates/02a_enter_demographics.html:7
+msgid ""
+"As we mentioned, we would like to ask you a few questions about yourself. "
+"This is very helpful for scientific research. You are free to skip any "
+"question you do not want to answer."
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:5
+msgid "Task 2: Shuffling your story"
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:8
+msgid ""
+"We have automatically split your story into sentences. You can drag and drop "
+"sentences to change their order. You can select a sentence by clicking and "
+"holding the left mouse button. Releasing the left mouse button while "
+"hovering over another sentence switches their position. When you are happy "
+"with your shuffle, rate the difficulty and press the 'Next' button."
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:10
+msgid "Reshuffling difficulty"
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:11
+msgid ""
+"Before submitting your story, you should think about how hard it is to "
+"reconstruct the story. You can do this on a scale from 0 to 10, where 0 "
+"means trivial (perhaps even unchanged) and 10 means that all sentence have "
+"been totally randomized in a way that there is no discernible logical "
+"ordering."
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:13
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:16
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:16
+msgid "Your original story"
+msgstr ""
+
+#: webapp/templates/03_shuffle_story.html:21
+msgid "Now shuffle this story yourself:"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:5
+msgid "Task 3: Rating the model's reconstruction of your shuffle"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:8
+msgid ""
+"A Large Language Model has attempted to reconstruct your story. Your task is "
+"to rate how well the model has done so on two points:"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:10
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:10
+msgid "Reconstruction quality"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:11
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:11
+msgid ""
+"How well has the model reconstructed the story? A score of 0 means that the "
+"model almost completely deviates from the original story in terms of "
+"factuality, writing, and ordering. A score of 10 means that the model has "
+"accurately reconstructed the writing and ordering of the original story."
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:13
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:13
+msgid "Narrative quality"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:14
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:14
+msgid ""
+"It is possible that the model rewrote (some parts of) the story. Regardless "
+"of how well it reconstructs the original, how readable and coherent is the "
+"model output? A score of 0 means that the model has produced garbage, "
+"unintelligible output. A score of 10 means that the model has written a "
+"fluent and coherent story."
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:23
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:23
+msgid "The LLM's reconstruction"
+msgstr ""
+
+#: webapp/templates/04_rate_human_shuffle_reconstructed.html:24
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:24
+msgid ""
+"Note that the LLM may make some formatting errors. This is expected and "
+"should not be rated negatively."
+msgstr ""
+
+#: webapp/templates/04a_next_reconstruction.html:5
+msgid ""
+"The next task is very similar to the one you just did, except that the story "
+"was shuffled randomly instead of by you."
+msgstr ""
+
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:5
+msgid ""
+"Task 4: Rating the model's reconstruction of the system's random shuffle"
+msgstr ""
+
+#: webapp/templates/05_rate_random_shuffle_reconstructed.html:8
+msgid ""
+"This task is identical to the previous one, except that the story has been "
+"shuffled completely randomly by the system. Your task is to rate how well "
+"the model has reconstructed the story on the same two points as before:"
+msgstr ""
+
+#: webapp/templates/06_thank_you.html:5
+msgid "Thank you!"
+msgstr ""
+
+#: webapp/templates/06_thank_you.html:6
+msgid ""
+"This concludes the experiment. You are very much encouraged to redo the "
+"experiment as much as you like, provided all your stories are somewhat "
+"unique. The more stories, the better!"
+msgstr ""
+
+#: webapp/templates/06_thank_you.html:8
+msgid ""
+"Feel free to ask us any questions you may have about the experiment or the "
+"world of large language models. On behalf of the team, we thank you for your "
+"participation!"
+msgstr ""
 
 #: webapp/templates/base.html:23
 msgid "End experiment"
