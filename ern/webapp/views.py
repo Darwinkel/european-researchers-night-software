@@ -153,9 +153,8 @@ def rate_human_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
         form = RateReconstructionForm(request.POST)
 
         if form.is_valid():
-            sample.rating_reconstructed_human_fluency = form.cleaned_data["fluency"]
-            sample.rating_reconstructed_human_flow = form.cleaned_data["flow"]
-            sample.rating_reconstructed_human_accuracy = form.cleaned_data["accuracy"]
+            sample.rating_reconstructed_human_quality = form.cleaned_data["quality"]
+            sample.rating_reconstructed_human_niceness = form.cleaned_data["niceness"]
             sample.save()
             return redirect("next_reconstruction")
 
@@ -181,9 +180,8 @@ def rate_random_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
         form = RateReconstructionForm(request.POST)
 
         if form.is_valid():
-            sample.rating_reconstructed_random_fluency = form.cleaned_data["fluency"]
-            sample.rating_reconstructed_random_flow = form.cleaned_data["flow"]
-            sample.rating_reconstructed_random_accuracy = form.cleaned_data["accuracy"]
+            sample.rating_reconstructed_random_quality = form.cleaned_data["quality"]
+            sample.rating_reconstructed_random_niceness = form.cleaned_data["niceness"]
             sample.save()
             return redirect("thank_you")
 

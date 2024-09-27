@@ -33,23 +33,17 @@ class Sample(models.Model):  # noqa: DJ008
     random_shuffled_story = models.CharField(max_length=2500)
 
     llm_reconstructed_human_story = models.CharField(default="", max_length=2500)
-    rating_reconstructed_human_fluency = models.IntegerField(
+    rating_reconstructed_human_quality = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
-    rating_reconstructed_human_flow = models.IntegerField(
-        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
-    )
-    rating_reconstructed_human_accuracy = models.IntegerField(
+    rating_reconstructed_human_niceness = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
 
     llm_reconstructed_random_story = models.CharField(default="", max_length=2500)
-    rating_reconstructed_random_fluency = models.IntegerField(
+    rating_reconstructed_random_quality = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )
-    rating_reconstructed_random_flow = models.IntegerField(
-        default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
-    )
-    rating_reconstructed_random_accuracy = models.IntegerField(
+    rating_reconstructed_random_niceness = models.IntegerField(
         default=5, validators=[MinValueValidator(0), MaxValueValidator(10)]
     )

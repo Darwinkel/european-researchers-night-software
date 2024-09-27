@@ -84,12 +84,19 @@ class RateReconstructionForm(forms.Form):
     """Rate reconstruction form (both human and random)."""
 
     template_name = "bootstrap_form.html"
-    flow = forms.IntegerField(
-        initial=5, min_value=0, max_value=10, required=True, label="Flow", widget=BootstrapIntegerInput()
+    quality = forms.IntegerField(
+        initial=5,
+        min_value=0,
+        max_value=10,
+        required=True,
+        label="How good is this reconstruction?",
+        widget=BootstrapIntegerInput(),
     )
-    fluency = forms.IntegerField(
-        initial=5, min_value=0, max_value=10, required=True, label="Fluency", widget=BootstrapIntegerInput()
-    )
-    accuracy = forms.IntegerField(
-        initial=5, min_value=0, max_value=10, required=True, label="Accuracy", widget=BootstrapIntegerInput()
+    niceness = forms.IntegerField(
+        initial=5,
+        min_value=0,
+        max_value=10,
+        required=True,
+        label="The story might be different from the original. Do you like this particular story now?",
+        widget=BootstrapIntegerInput(),
     )

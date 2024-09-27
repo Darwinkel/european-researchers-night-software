@@ -1,5 +1,6 @@
 services:
   django-ern:
+    # image: european-researchers-night-software-django-ern:latest
     build: .
     ports:
       - '8000:8000'
@@ -7,6 +8,8 @@ services:
       - ALL
     security_opt:
       - no-new-privileges:true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - db:/usr/src/app/db/
     environment:
