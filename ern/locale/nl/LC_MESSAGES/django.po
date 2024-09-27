@@ -370,7 +370,7 @@ msgstr "De reconstructie van het LLM"
 msgid ""
 "Note that the LLM may make some formatting errors. This is expected and "
 "should not be rated negatively."
-msgstr "Het kan zijn dat het LLM enkele opmaakfouten maakt. Dit is te verwachten en moet meewegen in je beoordeling."
+msgstr "Het kan zijn dat het LLM enkele opmaakfouten maakt. Dit is te verwachten en moet niet meewegen in je beoordeling."
 
 #: webapp/templates/04a_next_reconstruction.html:5
 msgid ""
