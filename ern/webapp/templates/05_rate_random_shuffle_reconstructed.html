@@ -24,16 +24,16 @@ A score of 0 means that the model has fabricated information, while a score of 1
 
 <h2>Your original story</h2>
 <div class="container">
-    <div class="box">
-        <p>{{ story_text }}</p>
-    </div>
+        {% for sentence in tokenized_story_text %}
+        <div class="box">{{ sentence }}</div>
+        {% endfor %}
 </div>
 
 <h2>The LLM's reconstruction</h2>
 <div class="container">
-    <div class="box">
-         <p>{{ random_reconstructed_story }}</p>
-    </div>
+        {% for sentence in tokenized_random_reconstructed_story %}
+        <div class="box">{{ sentence }}</div>
+        {% endfor %}
 </div>
 
 <form action="{% url 'rate_random_shuffle_reconstructed' %}" method="post">

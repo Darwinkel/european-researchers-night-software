@@ -18,9 +18,9 @@ You can do this on a scale from 0 to 10, where 0 means trivial (perhaps even unc
 <h2>Your original story</h2>
 
 <div class="container">
-    <div class="box">
-         <p>{{ story_text }}</p>
-    </div>
+        {% for sentence in tokenized_story_text %}
+        <div draggable="false" class="box">{{ sentence }}</div>
+        {% endfor %}
 </div>
 
 <h2>The reshuffled story</h2>
@@ -31,9 +31,6 @@ You can do this on a scale from 0 to 10, where 0 means trivial (perhaps even unc
         {% for sentence in tokenized_story_text %}
         <div draggable="true" class="box"><input type="hidden" name="dragdrop_list" value="{{ sentence }}">{{ sentence }}</div>
         {% endfor %}
-        <div>
-
-        </div>
     </div>
     {{ form }}
 </form>

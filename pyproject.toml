@@ -12,12 +12,9 @@ django = "^5.0"
 ruff = "^0.6"
 mypy = "^1.10"
 nltk = "^3.9"
-#transformers = "^4.43.3"
-#torch = "^2.4.0"
-#accelerate = "^0.33.0"
-#bitsandbytes = "^0.43.2"
 setuptools = "^75.1"
-django-stubs = {extras = ["compatible-mypy"], version = "^5.0.4"}
+django-stubs = {extras = ["compatible-mypy"], version = "^5.1"}
+openai = "^1.50"
 
 
 [build-system]

@@ -1,6 +1,6 @@
-"""Reconstruct text using an open-source HuggingFace language model."""
+"""Reconstruct text using an OpenAPI-compatible server."""
 
-#from transformers import pipeline
+from openai import OpenAI
 
 
 def dutch_chat(sentences: str) -> list[dict[str, str]]:
@@ -41,27 +41,25 @@ def reconstruct_with_llm(lang: str, human_shuffled_story: str, random_shuffled_s
 
     if lang == "nl":
         model = "BramVanroy/GEITje-7B-ultra"
+        client = OpenAI(base_url="http://localhost:8890/v1", api_key="asdf")
         reconstruct_human_shuffle_chat = dutch_chat(human_shuffled_story)
         reconstruct_random_shuffle_chat = dutch_chat(random_shuffled_story)
 
     else:
-        model = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-        reconstruct_human_shuffle_chat = english_chat(human_shuffled_story)
-        reconstruct_random_shuffle_chat = english_chat(random_shuffled_story)
+        model = "microsoft/phi-2"
+        client = OpenAI(base_url="http://localhost:8890/v1", api_key="asdf")
+        reconstruct_human_shuffle_chat = f"Rearrange the following list by moving the sentences, where you do not modify the sentences themselves: {human_shuffled_story}"
+        reconstruct_random_shuffle_chat = f"Rearrange the following list by moving the sentences, where you do not modify the sentences themselves: {random_shuffled_story}"
 
-    #chatbot = pipeline("text-generation", model=model, model_kwargs={"load_in_4bit": True}, device_map="auto")
+    llm_reconstructed_human_story = client.completions.create(
+        model=model, prompt=reconstruct_human_shuffle_chat, temperature=0.7
+    )
 
-    #llm_reconstructed_human_story = chatbot(reconstruct_human_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
-    #    -1
-    #]["content"]
+    llm_reconstructed_random_story = client.completions.create(
+        model=model, prompt=reconstruct_random_shuffle_chat, temperature=0.7
+    )
 
-    #llm_reconstructed_random_story = chatbot(reconstruct_random_shuffle_chat, max_new_tokens=1024)[0]["generated_text"][
-    #    -1
-    #]["content"]
+    print(llm_reconstructed_human_story)
+    print(llm_reconstructed_random_story)
 
-    #del chatbot
-
-    llm_reconstructed_human_story = human_shuffled_story
-    llm_reconstructed_random_story = random_shuffled_story
-
-    return llm_reconstructed_human_story, llm_reconstructed_random_story
+    return llm_reconstructed_human_story.choices[0].text, llm_reconstructed_random_story.choices[0].text

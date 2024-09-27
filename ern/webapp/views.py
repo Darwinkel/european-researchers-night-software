@@ -115,7 +115,6 @@ def shuffle_story(request: HttpRequest) -> HttpResponse:
         {
             "form": form,
             "sample_id": sample.id,
-            "story_text": sample.story_text,
             "tokenized_story_text": sent_tokenize(sample.story_text),
         },
     )
@@ -143,8 +142,8 @@ def rate_human_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
         {
             "form": form,
             "sample_id": sample.id,
-            "story_text": sample.story_text,
-            "human_reconstructed_story": sample.llm_reconstructed_human_story,
+            "tokenized_story_text": sent_tokenize(sample.story_text),
+            "tokenized_human_reconstructed_story": sent_tokenize(sample.llm_reconstructed_human_story),
         },
     )
 
@@ -171,8 +170,8 @@ def rate_random_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
         {
             "form": form,
             "sample_id": sample.id,
-            "story_text": sample.story_text,
-            "random_reconstructed_story": sample.llm_reconstructed_random_story,
+            "tokenized_story_text": sent_tokenize(sample.story_text),
+            "tokenized_random_reconstructed_story": sent_tokenize(sample.llm_reconstructed_random_story),
         },
     )
 

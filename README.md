@@ -74,3 +74,4 @@ Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstru
 
 On Friday:
 - Play around with sane model and prompt defaults
+- Implement Rik's feedback

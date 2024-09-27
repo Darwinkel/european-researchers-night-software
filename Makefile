@@ -13,7 +13,7 @@ quality:
 	make typing
 
 run:
-	python -m nltk.downloader punkt # Needed for basic sentence tokenization
+	python -m nltk.downloader punkt punkt_tab # Needed for basic sentence tokenization
 	cd ern && python3 manage.py makemessages -l nl
 	cd ern && django-admin compilemessages
 	cd ern && python manage.py runserver 0.0.0.0:8000

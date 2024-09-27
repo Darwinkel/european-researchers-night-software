@@ -46,7 +46,7 @@ class DemographicsForm(forms.Form):
     sex = forms.ChoiceField(
         choices=SEX_ENUM,
         required=False,
-        label="Sex",
+        label="Gender",
         widget=BootstrapSelectInput(),
     )
     age = forms.IntegerField(

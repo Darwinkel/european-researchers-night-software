@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = "%pj364s^&0o8w$_1e@c-u5ddd5%utxpfgzf47pxko5ut5%utxpf5%utxpf5%utxpf5%utxpf5%utxpft^6)"  # noqa: S105
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 CORS_ALLOWED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000", "https://ern.darwinkel.net"]
-CSRF_TRUSTED_ORIGINS=["http://localhost:8000", "http://127.0.0.1:8000", "https://ern.darwinkel.net"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000", "https://ern.darwinkel.net"]
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
