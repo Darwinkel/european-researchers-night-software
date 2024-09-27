@@ -31,11 +31,9 @@ A score of 0 means that the model has fabricated information, while a score of 1
 
 <h2>The LLM's reconstruction</h2>
 <div class="container">
-    <div class="box">
         {% for sentence in tokenized_human_reconstructed_story %}
         <div class="box">{{ sentence }}</div>
         {% endfor %}
-    </div>
 </div>
 
 <form action="{% url 'rate_human_shuffle_reconstructed' %}" method="post">

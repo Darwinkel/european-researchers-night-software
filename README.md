@@ -75,3 +75,14 @@ Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstru
 On Friday:
 - Play around with sane model and prompt defaults
 - Implement Rik's feedback
+
+Store tokenized or non-tokenized story and LLM output?
+
+What to do with the model's extra comments/output?
+
+Dutch model: 
+English model: 
+
+
+ssh -N -L 8890:localhost:8890 -L 8891:localhost:8891 gpu-machine-tunnel
+
