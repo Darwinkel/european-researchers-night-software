@@ -27,13 +27,13 @@ A score of 10 means that the model has written a fluent and coherent story.</p>
 </div>
 <br>
 <h2>The LLM's reconstruction</h2>
-Note that the LLM may make some formatting errors. This is expected and should not be rated negatively.
+<p>Note that the LLM may make some formatting errors. This is expected and should not be rated negatively.</p>
 <div class="container">
         {% for sentence in tokenized_human_reconstructed_story %}
         <div class="box">{{ sentence }}</div>
         {% endfor %}
 </div>
-
+<br>
 <form action="{% url 'rate_human_shuffle_reconstructed' %}" method="post">
     {% csrf_token %}
     {{ form }}
