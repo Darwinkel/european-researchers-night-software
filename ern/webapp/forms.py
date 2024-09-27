@@ -1,7 +1,7 @@
 """Django form definitions."""
 
 from django import forms
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 from .models import SEX_ENUM
 from .widgets import BootstrapCheckboxInput, BootstrapIntegerInput, BootstrapSelectInput, BootstrapTextAreaInput
 

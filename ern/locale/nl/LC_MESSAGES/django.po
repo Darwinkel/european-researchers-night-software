@@ -113,7 +113,7 @@ msgid ""
 "quality data. By participating in this data collection effort you can "
 "contribute to better, safer, and trustworthy AI technologies for Dutch and "
 "English."
-msgstr "Je helpt de Computational Linguistics Group van de RuG bij het verzamelen van gegevens om de volgende generatie van Large Language Models te trainen en testen. Bij voorbaat dank! Jouw bijdrage zal de creatie van uitdagende en hoogwaardige gegevens ondersteunen. Door deel te nemen aan deze dataverzamelingsinspanning kun je bijdragen aan betere, veiligere en betrouwbare AI-technologieën voor het Nederlands en Engels."
+msgstr "Je helpt de Computational Linguistics Group van de RuG bij het verzamelen van gegevens om de volgende generatie van Large Language Models te trainen en testen. Bij voorbaat dank! Jouw bijdrage zal de creatie van uitdagende en kwalitatief goede gegevens ondersteunen. Door deel te nemen aan deze dataverzamelingsinspanning kun je bijdragen aan betere, veiligere en betrouwbare AI-technologieën voor het Nederlands en Engels."
 
 #: webapp/templates/01a_why.html:11 webapp/templates/01b_what.html:16
 #: webapp/templates/01c_how.html:17 webapp/templates/01d_other.html:13
@@ -141,7 +141,7 @@ msgstr "Je wordt gevraagd de volgorde van de zinnen van het verhaal te verandere
 
 #: webapp/templates/01b_what.html:11
 msgid "You estimate the difficulty of reconstructing the original story"
-msgstr "Je schat de moeilijkheidsgraad van het reconstrueren van het originele verhaal"
+msgstr "Je schat de moeilijkheidsgraad van het reconstrueren van het originele verhaal in"
 
 #: webapp/templates/01b_what.html:12
 msgid "You are asked to rate the model's reconstruction of your reordering"
