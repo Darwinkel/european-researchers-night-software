@@ -1,6 +1,6 @@
 services:
   django-ern:
-    # image: european-researchers-night-software-django-ern:latest
+    image: "ghcr.io/darwinkel/european-researchers-night-software:main"
     build: .
     ports:
       - '8000:8000'
@@ -14,7 +14,11 @@ services:
       - db:/usr/src/app/db/
     environment:
       DEBUG: "False"
-      OPENAPI_HOST: "http://host.docker.internal"
+      SECRET_KEY: "ChangeMe!"
       ALLOWED_HOST: "https://ern.darwinkel.net"
+      NL_OPENAI_HOST: "http://host.docker.internal:8891/v1"
+      NL_MODEL: "BramVanroy/GEITje-7B-ultra"
+      EN_OPENAI_HOST: "http://host.docker.internal:8890/v1"
+      EN_MODEL: "microsoft/Phi-3.5-mini-instruct"
 volumes:
   db:

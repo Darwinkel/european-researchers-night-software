@@ -52,7 +52,7 @@ coverage.xml
 cover/
 
 # Translations
-*.mo
+# *.mo
 *.pot
 
 # Django stuff:
@@ -122,7 +122,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/

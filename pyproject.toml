@@ -9,14 +9,16 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0"
-ruff = "^0.6"
-mypy = "^1.10"
 nltk = "^3.9"
-setuptools = "^75.1"
-django-stubs = {extras = ["compatible-mypy"], version = "^5.1"}
 openai = "^1.50"
 django-environ = "^0.11.2"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6"
+mypy = "^1.10"
+poetry-plugin-export = "^1.8"
+django-stubs = {extras = ["compatible-mypy"], version = "^5.1"}
+setuptools = "^75.1"
 
 [build-system]
 requires = ["poetry-core"]

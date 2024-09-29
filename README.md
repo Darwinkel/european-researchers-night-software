@@ -1,90 +1,44 @@
 # European Researcher's Night Software
 
-**Can you out-smart AI?**
+This Django application was used for the European Researcher's Night 2024 to collect data.
 
-# To-do
-- [ ] Adapt to use CIT LLM endpoint
-- [ ] Needs HF API key for LLama3
-- [ ] Complete Dutch translations
-- [ ] How long should the story input/output be?
+# Development installation
+Dependencies are handled with Poetry. See `make run` for the recommend way to run the project.
+Dutch translations are handled with Django's built-in translation system.
 
-## Goal
+# Production deployment
 
-- Data collection for ERN
+Make sure to change `SECRET_KEY` to a random string and `ALLOWED_HOST` to the domain name of the production server in `docker-compose.yml` before deploying to production.
 
-## Data collected
+```bash
+docker compose run --rm django-ern python manage.py migrate
+docker compose run --rm django-ern python manage.py createsuperuser --username admin --email admin@localhost
+docker compose up -d
+```
 
-- Information about story characteristics by age and sex
-- Information about shuffling characteristics by age and sex
-- New ground truth Dutch kid’s stories
-- Model performance (0-10 rating) on reassembling human shuffle (fluency, logical flow, and factual accuracy)
-- Model performance (0-10 rating) on reassembling truly random shuffle (fluency, logical flow, and factual accuracy)
+You should also set up a reverse proxy with HTTPS, such as Traefik, to serve the application.
 
-### Open questions
-- How to check quality and appropriateness of data? We could do this manually, but depends on the amount of samples we collect. Should not be more than 100 for a single night?
+The `sqlite3` database is stored in a Docker volume, which is mounted in the container. The `db.sqlite3` file is created automatically if it does not exist.
 
-## Tasks
+# Model deployment
+This project assumes that `EN_OPENAI_HOST` and `NL_OPENAI_HOST` refer to OpenAI-compatible endpoints, such as [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html).
+It also assumes that there is a separate deployment for the Dutch and English models.
 
-## Scientific considerations
-- A confounding variable is the familiarity of LLMs with existing stories
-- Language for the experiment and interface is Dutch
+For the European Researcher's Night, the CIT provided an SSH tunnel with port forwarding to the GPU machine. Ask them for the details.
+Basically, you can create a tunnel to the GPU server with the below command on the host machine, and then reach it from Docker containers through `host.docker.internal`:
 
-## UI/UX
-As a user:
-- When opening a new session, I have to accept a consent form and select either Dutch or English
-- I have to come up with a novel short story, similar to, but not based on, existing stories
-- I suggest a "random" shuffle of the sentences
-  - The system also generates a true random shuffle
-- I am provided with some unbiased, nonsuggestive random ideas for stories
-- I am provided with some random suggestions for themes or subjects
-- I can optionally leave my sex and age demographics after the survey
-
-
-### User flow
-
-Every page has a "Stoppen met het experiment" button, which redirects to the first page.
-
-1. First page, the default, shows an explanation of the experiment, and tells users to sign the consent form and select their language
-2. User clicks "Volgende"
-3. User gets a textbox where they can enter their story. The page shows some suggestions for themes and examples
-4. User clicks "Volgende"
-5. User sees their story, and can shuffle it. The page shows some examples of shuffles.
-6. User clicks "Volgende"
-7. User sees the correct story, the human-shuffled story, and the LLM's reconstruction. They can rate the fluency, logical flow, and factual accuracy of the LLM reconstruction
-8. User clicks "Volgende"
-9. User sees the correct story, the truly randomly shuffled story, and the LLM's reconstruction. They can rate the fluency, logical flow, and factual accuracy of the LLM reconstruction
-10. User clicks "Volgende"
-11. User enters a thank-you page, with a request for demographics. They can click "Ik wil graag mijn leeftijd en geslacht invullen voor wetenschappelijk onderzoek" or "Nee, bedankt". First button redirects to a page where they can enter it, second button redirects to the first page.
-
-## Data structures
-
-Sample
-
-Age | Sex | Story | Human-shuffled story | Random shuffled story | LLM reconstructed human shuffle | LLM reconstructed random shuffle | Rating of LLM reconstructed human shuffle | Rating of LLM reconstructred random shuffle
-
-
-## Todo
-
-- LLM prompts
-- LLM model (Phi3; Mistral7B). If we do multiple, randomly select it
-- Integration with CIT
-- Flashy first page (What's the story with LLM's? Come play!) -> Give me design
-- Text en/nl review (deploy to server)
-- Deploy stack to server (ern.darwinkel.net)
-
-On Friday:
-- Play around with sane model and prompt defaults
-- Implement Rik's feedback
-- Create nice landing page
-- Translate into Dutch
-
-Store tokenized or non-tokenized story and LLM output?
-
-What to do with the model's extra comments/output?
-
-Dutch model: 
-English model: 
-
-
+```bash
 ssh -N -L 8890:localhost:8890 -L 8891:localhost:8891 gpu-machine-tunnel
+```
 
+# Getting a CSV dump of the data
+Using the `sqlite3` command line tool, you can dump the collected data to a CSV file with the following commands:
+
+```bash
+sqlite3 db/db.sqlite3
+.headers on
+.mode csv
+.output db.csv
+SELECT * FROM webapp_sample;
+.quit
+```

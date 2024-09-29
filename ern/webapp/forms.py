@@ -2,6 +2,7 @@
 
 from django import forms
 from django.utils.translation import gettext_lazy as _
+
 from .models import SEX_ENUM
 from .widgets import BootstrapCheckboxInput, BootstrapIntegerInput, BootstrapSelectInput, BootstrapTextAreaInput
 
@@ -13,7 +14,9 @@ class ConsentForm(forms.Form):
     q1 = forms.BooleanField(
         widget=BootstrapCheckboxInput(),
         required=True,
-        label=_("I have read and understood the information about the research project and I voluntarily agree to participate."),
+        label=_(
+            "I have read and understood the information about the research project and I voluntarily agree to participate."  # noqa: E501
+        ),
     )
     q2 = forms.BooleanField(
         widget=BootstrapCheckboxInput(),
@@ -28,7 +31,9 @@ class ConsentForm(forms.Form):
     q4 = forms.BooleanField(
         widget=BootstrapCheckboxInput(),
         required=True,
-        label=_("I understand that the data collected through the stories that I provide will be deposited in DataverseNL so that it can be used for future research and learning."),
+        label=_(
+            "I understand that the data collected through the stories that I provide will be deposited in DataverseNL so that it can be used for future research and learning."  # noqa: E501
+        ),
     )
     q5 = forms.BooleanField(
         widget=BootstrapCheckboxInput(),

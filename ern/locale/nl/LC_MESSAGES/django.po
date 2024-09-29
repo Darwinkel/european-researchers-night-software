@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 18:51+0200\n"
+"POT-Creation-Date: 2024-09-29 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,68 +18,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ern/settings.py:119
+#: ern/settings.py:128
 msgid "Nederlands"
 msgstr ""
 
-#: ern/settings.py:120
+#: ern/settings.py:129
 msgid "English"
 msgstr ""
 
-#: webapp/forms.py:16
+#: webapp/forms.py:18
 msgid ""
 "I have read and understood the information about the research project and I "
 "voluntarily agree to participate."
-msgstr "Ik heb de informatie over het onderzoeksproject gelezen en begrepen en ga vrijwillig akkoord met deelname."
+msgstr ""
+"Ik heb de informatie over het onderzoeksproject gelezen en begrepen en ga "
+"vrijwillig akkoord met deelname."
 
-#: webapp/forms.py:21
+#: webapp/forms.py:24
 msgid "I understand that I can withdraw at any time, without giving a reason."
-msgstr "Ik begrijp dat ik op elk moment kan terugtrekken, zonder opgave van reden."
+msgstr ""
+"Ik begrijp dat ik op elk moment kan terugtrekken, zonder opgave van reden."
 
-#: webapp/forms.py:26
+#: webapp/forms.py:29
 msgid ""
 "I understand that taking part in the study involves interacting with an AI "
 "agent."
-msgstr "Ik begrijp dat deelname aan de studie inhoudt dat ik interactie heb met een AI-agent."
+msgstr ""
+"Ik begrijp dat deelname aan de studie inhoudt dat ik interactie heb met een "
+"AI-agent."
 
-#: webapp/forms.py:31
+#: webapp/forms.py:35
 msgid ""
 "I understand that the data collected through the stories that I provide will "
 "be deposited in DataverseNL so that it can be used for future research and "
 "learning."
-msgstr "Ik begrijp dat de gegevens die worden verzameld via de verhalen die ik verstrek, zullen worden gedeponeerd in DataverseNL zodat het kan worden gebruikt voor toekomstig onderzoek."
+msgstr ""
+"Ik begrijp dat de gegevens die worden verzameld via de verhalen die ik "
+"verstrek, zullen worden gedeponeerd in DataverseNL zodat het kan worden "
+"gebruikt voor toekomstig onderzoek."
 
-#: webapp/forms.py:36
+#: webapp/forms.py:41
 msgid ""
 "I know whom to contact in case I have questions and I have been informed "
 "about my rights."
-msgstr "Ik weet bij wie ik terecht kan als ik vragen heb en ik ben geïnformeerd over mijn rechten."
+msgstr ""
+"Ik weet bij wie ik terecht kan als ik vragen heb en ik ben geïnformeerd over "
+"mijn rechten."
 
-#: webapp/forms.py:47
+#: webapp/forms.py:52
 msgid "Gender"
 msgstr "Gender"
 
-#: webapp/forms.py:55
+#: webapp/forms.py:60
 msgid "Age (set to '0' if you prefer not to say)"
 msgstr "Leeftijd (zet op '0' als je dat liever niet zegt)"
 
-#: webapp/forms.py:64
+#: webapp/forms.py:69
 msgid "Story"
 msgstr "Verhaal"
 
-#: webapp/forms.py:76
+#: webapp/forms.py:81
 msgid "Reconstruction difficulty"
 msgstr "Moeilijkheidsgraad van reconstructie"
 
-#: webapp/forms.py:90
+#: webapp/forms.py:95
 msgid "How good is this reconstruction?"
 msgstr "Hoe goed is deze reconstructie?"
 
-#: webapp/forms.py:98
+#: webapp/forms.py:103
 msgid ""
 "The story might be different from the original. Do you like this particular "
 "story now?"
-msgstr "Het verhaal kan anders zijn dan het origineel. Vind je dit specifieke verhaal leuk?"
+msgstr ""
+"Het verhaal kan anders zijn dan het origineel. Vind je dit specifieke "
+"verhaal leuk?"
 
 #: webapp/models.py:8
 msgid "Prefer not to say"
@@ -113,7 +125,13 @@ msgid ""
 "quality data. By participating in this data collection effort you can "
 "contribute to better, safer, and trustworthy AI technologies for Dutch and "
 "English."
-msgstr "Je helpt de Computational Linguistics Group van de RuG bij het verzamelen van gegevens om de volgende generatie van Large Language Models te trainen en testen. Bij voorbaat dank! Jouw bijdrage zal de creatie van uitdagende en kwalitatief goede gegevens ondersteunen. Door deel te nemen aan deze dataverzamelingsinspanning kun je bijdragen aan betere, veiligere en betrouwbare AI-technologieën voor het Nederlands en Engels."
+msgstr ""
+"Je helpt de Computational Linguistics Group van de RuG bij het verzamelen "
+"van gegevens om de volgende generatie van Large Language Models te trainen "
+"en testen. Bij voorbaat dank! Jouw bijdrage zal de creatie van uitdagende en "
+"kwalitatief goede gegevens ondersteunen. Door deel te nemen aan deze "
+"dataverzamelingsinspanning kun je bijdragen aan betere, veiligere en "
+"betrouwbare AI-technologieën voor het Nederlands en Engels."
 
 #: webapp/templates/01a_why.html:11 webapp/templates/01b_what.html:16
 #: webapp/templates/01c_how.html:17 webapp/templates/01d_other.html:13
@@ -129,7 +147,8 @@ msgstr "Wat vragen we van je tijdens het onderzoek?"
 
 #: webapp/templates/01b_what.html:8
 msgid "You are asked to do five tasks as part of a game."
-msgstr "Je wordt gevraagd om vijf taken uit te voeren als onderdeel van een spel."
+msgstr ""
+"Je wordt gevraagd om vijf taken uit te voeren als onderdeel van een spel."
 
 #: webapp/templates/01b_what.html:9
 msgid "You have to come up with a story between 5 and 20 sentences."
@@ -137,19 +156,26 @@ msgstr "Je moet een verhaal bedenken van tussen de 5 en 20 zinnen."
 
 #: webapp/templates/01b_what.html:10
 msgid "You are asked to change the order of the sentences of the story"
-msgstr "Je wordt gevraagd de volgorde van de zinnen van het verhaal te veranderen"
+msgstr ""
+"Je wordt gevraagd de volgorde van de zinnen van het verhaal te veranderen"
 
 #: webapp/templates/01b_what.html:11
 msgid "You estimate the difficulty of reconstructing the original story"
-msgstr "Je schat de moeilijkheidsgraad van het reconstrueren van het originele verhaal in"
+msgstr ""
+"Je schat de moeilijkheidsgraad van het reconstrueren van het originele "
+"verhaal in"
 
 #: webapp/templates/01b_what.html:12
 msgid "You are asked to rate the model's reconstruction of your reordering"
-msgstr "Je wordt gevraagd de reconstructie van het model van je herschikking te beoordelen"
+msgstr ""
+"Je wordt gevraagd de reconstructie van het model van je herschikking te "
+"beoordelen"
 
 #: webapp/templates/01b_what.html:13
 msgid "You are asked to rate the model's reconstruction of a random reordering"
-msgstr "Je wordt gevraagd de reconstructie van het model van een willekeurige herschikking te beoordelen"
+msgstr ""
+"Je wordt gevraagd de reconstructie van het model van een willekeurige "
+"herschikking te beoordelen"
 
 #: webapp/templates/01c_how.html:5
 msgid "How will we treat your data?"
@@ -160,34 +186,50 @@ msgid ""
 "The answers to the game will be used to create new datasets for training and "
 "testing LLMs in Dutch and English. The data can in no way be linked back to "
 "you personally."
-msgstr "De antwoorden op het spel zullen worden gebruikt om nieuwe datasets te maken voor het trainen en testen van LLM's in het Nederlands en Engels. De gegevens kunnen op geen enkele manier aan jou persoonlijk worden gekoppeld."
+msgstr ""
+"De antwoorden op het spel zullen worden gebruikt om nieuwe datasets te maken "
+"voor het trainen en testen van LLM's in het Nederlands en Engels. De "
+"gegevens kunnen op geen enkele manier aan jou persoonlijk worden gekoppeld."
 
 #: webapp/templates/01c_how.html:9
 msgid ""
 "We will collect only two sociodemographic factors: age and gender. The "
 "disclosure of this information is voluntary. You will be asked to provide "
 "this information at the beginning of the experiment, but can skip this step."
-msgstr "We zullen slechts twee sociodemografische factoren verzamelen: leeftijd en geslacht. Het verstrekken van deze informatie is vrijwillig. Je wordt aan het begin van het experiment gevraagd om deze informatie te verstrekken, maar je kunt deze stap overslaan."
+msgstr ""
+"We zullen slechts twee sociodemografische factoren verzamelen: leeftijd en "
+"geslacht. Het verstrekken van deze informatie is vrijwillig. Je wordt aan "
+"het begin van het experiment gevraagd om deze informatie te verstrekken, "
+"maar je kunt deze stap overslaan."
 
 #: webapp/templates/01c_how.html:11
 msgid ""
 "The two socio-demographics data points you decide to disclose will only be "
 "made available in an aggregated form. The entire data collection process is "
 "anonymous."
-msgstr "De twee sociodemografische gegevenspunten die je besluit in te vullen, worden alleen beschikbaar gesteld in geaggregeerde vorm. Het hele dataverzamelingsproces is anoniem."
+msgstr ""
+"De twee sociodemografische gegevenspunten die je besluit in te vullen, "
+"worden alleen beschikbaar gesteld in geaggregeerde vorm. Het hele "
+"dataverzamelingsproces is anoniem."
 
 #: webapp/templates/01c_how.html:13
 msgid ""
 "The data will be processed by researchers at the Computational Linguistics "
 "Group of the Faculty of Arts under the coordination of Prof. Malvina Nissim."
-msgstr "De gegevens worden verwerkt door onderzoekers van de Computational Linguistics Group van de Faculteit der Letteren onder leiding van prof. Malvina Nissim."
+msgstr ""
+"De gegevens worden verwerkt door onderzoekers van de Computational "
+"Linguistics Group van de Faculteit der Letteren onder leiding van prof. "
+"Malvina Nissim."
 
 #: webapp/templates/01c_how.html:15
 msgid ""
 "The sociodemographic data will serve to offer other researchers additional "
 "insights into who has contributed to the creation of the data, offering "
 "information on potential bias."
-msgstr "De sociodemografische gegevens zullen andere onderzoekers extra inzichten bieden in wie heeft bijgedragen aan de creatie van de gegevens, waardoor informatie wordt geboden over mogelijke bias in de data."
+msgstr ""
+"De sociodemografische gegevens zullen andere onderzoekers extra inzichten "
+"bieden in wie heeft bijgedragen aan de creatie van de gegevens, waardoor "
+"informatie wordt geboden over mogelijke bias in de data."
 
 #: webapp/templates/01d_other.html:5
 msgid "Do you have to participate in this study?"
@@ -199,7 +241,12 @@ msgid ""
 "you do not need to explain why, and there will be no negative consequences "
 "for you. You have the right to withdraw from this study at any time until "
 "the first scientific output of the study has been submitted for publication."
-msgstr "Deelnemen aan dit onderzoek is vrijwillig. Als je besluit niet deel te nemen, hoef je niet uit te leggen waarom, en er zullen geen negatieve gevolgen voor je zijn. Je hebt het recht om op elk moment terug te trekken uit dit onderzoek totdat de eerste wetenschappelijke output van het onderzoek is ingediend voor publicatie."
+msgstr ""
+"Deelnemen aan dit onderzoek is vrijwillig. Als je besluit niet deel te "
+"nemen, hoef je niet uit te leggen waarom, en er zullen geen negatieve "
+"gevolgen voor je zijn. Je hebt het recht om op elk moment terug te trekken "
+"uit dit onderzoek totdat de eerste wetenschappelijke output van het "
+"onderzoek is ingediend voor publicatie."
 
 #: webapp/templates/01d_other.html:8
 msgid "What else do you need to know?"
@@ -211,7 +258,11 @@ msgid ""
 "study. You can ask your questions now, during, or after the study. You can "
 "do so by speaking with one of the researchers present or by emailing the "
 "research team (m.nissim@rug.nl)."
-msgstr "We moedigen je aan om eventuele vragen of opmerkingen die je hebt over het onderzoek te delen. Je kunt je vragen nu, tijdens of na het onderzoek stellen. Dit kan door te praten met een van de aanwezige onderzoekers of door een e-mail te sturen naar het onderzoeksteam (m.nissim@rug.nl)."
+msgstr ""
+"We moedigen je aan om eventuele vragen of opmerkingen die je hebt over het "
+"onderzoek te delen. Je kunt je vragen nu, tijdens of na het onderzoek "
+"stellen. Dit kan door te praten met een van de aanwezige onderzoekers of "
+"door een e-mail te sturen naar het onderzoeksteam (m.nissim@rug.nl)."
 
 #: webapp/templates/01d_other.html:11
 msgid ""
@@ -219,7 +270,11 @@ msgid ""
 "of the research team can be asked to the Research Ethical Review Committee "
 "(CETO) of the Faculties of Arts, Philosophy, and Science &amp; Engineering "
 "of the University of Groningen: ceto@rug.nl."
-msgstr "Vragen over je rechten als onderzoeksdeelnemer of over het gedrag van het onderzoeksteam kunnen worden gesteld aan de Research Ethical Review Committee (CETO) van de Faculteiten der Letteren, Wijsbegeerte en Science & Engineering van de Rijksuniversiteit Groningen:"
+msgstr ""
+"Vragen over je rechten als onderzoeksdeelnemer of over het gedrag van het "
+"onderzoeksteam kunnen worden gesteld aan de Research Ethical Review "
+"Committee (CETO) van de Faculteiten der Letteren, Wijsbegeerte en Science & "
+"Engineering van de Rijksuniversiteit Groningen:"
 
 #: webapp/templates/01e_consent.html:5
 msgid "Consent"
@@ -230,7 +285,10 @@ msgid ""
 "Before we can begin, you must consent to participate in this experiment. "
 "Please read the following information and click the 'Next' button to "
 "continue."
-msgstr "Voordat we kunnen beginnen, moet je toestemming geven om deel te nemen aan dit experiment. Lees de volgende informatie en klik op de knop 'Volgende' om door te gaan."
+msgstr ""
+"Voordat we kunnen beginnen, moet je toestemming geven om deel te nemen aan "
+"dit experiment. Lees de volgende informatie en klik op de knop 'Volgende' om "
+"door te gaan."
 
 #: webapp/templates/02_enter_story.html:5
 msgid "Task 1: Coming up with a story"
@@ -243,7 +301,12 @@ msgid ""
 "similar in style and form to existing ones such as Cinderella, The Three "
 "Little Pigs, or Hansel and Gretel. You could also, for example, write about "
 "how you scored the winning goal in the World Cup finals"
-msgstr "Je moet een kort verhaal bedenken (tussen de 5 en 20 zinnen) dat geschikt zou zijn voor kinderen. Het moet een nieuw verhaal zijn, maar het kan qua stijl en vorm lijken op bestaande verhalen zoals Assepoester, De drie biggetjes of Hans en Grietje. Je zou ook bijvoorbeeld kunnen schrijven over hoe je het winnende doelpunt scoorde in de WK-finale"
+msgstr ""
+"Je moet een kort verhaal bedenken (tussen de 5 en 20 zinnen) dat geschikt "
+"zou zijn voor kinderen. Het moet een nieuw verhaal zijn, maar het kan qua "
+"stijl en vorm lijken op bestaande verhalen zoals Assepoester, De drie "
+"biggetjes of Hans en Grietje. Je zou ook bijvoorbeeld kunnen schrijven over "
+"hoe je het winnende doelpunt scoorde in de WK-finale"
 
 #: webapp/templates/02_enter_story.html:10
 msgid "Your story can be about anything!"
@@ -254,7 +317,10 @@ msgid ""
 "On the next page, the story will be split into sentences. You will then be "
 "asked to shuffle the sentences and estimate the difficulty of reconstructing "
 "the story."
-msgstr "Op de volgende pagina wordt het verhaal opgesplitst in zinnen. Vervolgens wordt je gevraagd de zinnen te herschikken en de moeilijkheidsgraad van het reconstrueren van het verhaal te schatten."
+msgstr ""
+"Op de volgende pagina wordt het verhaal opgesplitst in zinnen. Vervolgens "
+"wordt je gevraagd de zinnen te herschikken en de moeilijkheidsgraad van het "
+"reconstrueren van het verhaal te schatten."
 
 #: webapp/templates/02_enter_story.html:14
 msgid "Examples of themes"
@@ -266,13 +332,19 @@ msgid ""
 "adventures, friendship, family, school, etc. It is up to you whether the "
 "story includes magical or fantastic elements. Some stories have a take-home "
 "message or moral, but this is not necessary."
-msgstr "Suggesties voor thema's voor dit soort verhalen zijn dieren, avonturen, vriendschap, familie, school, enz. Het is aan jou of het verhaal magische of fantastische elementen bevat. Sommige verhalen hebben een boodschap of moraal om mee naar huis te nemen, maar dit is niet nodig."
+msgstr ""
+"Suggesties voor thema's voor dit soort verhalen zijn dieren, avonturen, "
+"vriendschap, familie, school, enz. Het is aan jou of het verhaal magische of "
+"fantastische elementen bevat. Sommige verhalen hebben een boodschap of "
+"moraal om mee naar huis te nemen, maar dit is niet nodig."
 
 #: webapp/templates/02_enter_story.html:17
 msgid ""
 "Please use appropriate punctuation between sentences to make sure they are "
 "processed correctly by the system."
-msgstr "Gebruik alstublieft de juiste interpunctie tussen zinnen om ervoor te zorgen dat ze correct worden verwerkt door het systeem."
+msgstr ""
+"Gebruik alstublieft de juiste interpunctie tussen zinnen om ervoor te zorgen "
+"dat ze correct worden verwerkt door het systeem."
 
 #: webapp/templates/02a_enter_demographics.html:5
 msgid "Demographics (optional)"
@@ -283,7 +355,10 @@ msgid ""
 "As we mentioned, we would like to ask you a few questions about yourself. "
 "This is very helpful for scientific research. You are free to skip any "
 "question you do not want to answer."
-msgstr "Zoals we al zeiden, willen we je graag een paar vragen stellen over jezelf. Dit is zeer nuttig voor wetenschappelijk onderzoek. Je bent vrij om vragen over te slaan die je niet wilt beantwoorden."
+msgstr ""
+"Zoals we al zeiden, willen we je graag een paar vragen stellen over jezelf. "
+"Dit is zeer nuttig voor wetenschappelijk onderzoek. Je bent vrij om vragen "
+"over te slaan die je niet wilt beantwoorden."
 
 #: webapp/templates/03_shuffle_story.html:5
 msgid "Task 2: Shuffling your story"
@@ -296,7 +371,13 @@ msgid ""
 "holding the left mouse button. Releasing the left mouse button while "
 "hovering over another sentence switches their position. When you are happy "
 "with your shuffle, rate the difficulty and press the 'Next' button."
-msgstr "We hebben je verhaal automatisch opgesplitst in zinnen. Je kunt zinnen verplaatsen door ze te slepen. Je kunt een zin selecteren door op de linker muisknop te klikken en vast te houden. Als je de linker muisknop loslaat terwijl je boven een andere zin zweeft, wisselen ze van positie. Als je tevreden bent met je herschikking, beoordeel dan de moeilijkheidsgraad en druk op de knop 'Volgende'."
+msgstr ""
+"We hebben je verhaal automatisch opgesplitst in zinnen. Je kunt zinnen "
+"verplaatsen door ze te slepen. Je kunt een zin selecteren door op de linker "
+"muisknop te klikken en vast te houden. Als je de linker muisknop loslaat "
+"terwijl je boven een andere zin zweeft, wisselen ze van positie. Als je "
+"tevreden bent met je herschikking, beoordeel dan de moeilijkheidsgraad en "
+"druk op de knop 'Volgende'."
 
 #: webapp/templates/03_shuffle_story.html:10
 msgid "Reshuffling difficulty"
@@ -309,7 +390,12 @@ msgid ""
 "means trivial (perhaps even unchanged) and 10 means that all sentence have "
 "been totally randomized in a way that there is no discernible logical "
 "ordering."
-msgstr "Voordat je je verhaal indient, moet je nadenken over hoe moeilijk het is om het verhaal te reconstrueren. Je kunt dit doen op een schaal van 0 tot 10, waarbij 0 triviaal betekent (misschien zelfs onveranderd) en 10 betekent dat alle zinnen volledig willekeurig zijn gerangschikt op een manier dat er geen herkenbare logische volgorde is."
+msgstr ""
+"Voordat je je verhaal indient, moet je nadenken over hoe moeilijk het is om "
+"het verhaal te reconstrueren. Je kunt dit doen op een schaal van 0 tot 10, "
+"waarbij 0 triviaal betekent (misschien zelfs onveranderd) en 10 betekent dat "
+"alle zinnen volledig willekeurig zijn gerangschikt op een manier dat er geen "
+"herkenbare logische volgorde is."
 
 #: webapp/templates/03_shuffle_story.html:13
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:16
@@ -329,7 +415,9 @@ msgstr "Taak 3: Beoordeling van de reconstructie van jouw herschikking"
 msgid ""
 "A Large Language Model has attempted to reconstruct your story. Your task is "
 "to rate how well the model has done so on two points:"
-msgstr "Een Large Language Model heeft geprobeerd je verhaal te reconstrueren. Je taak is om te beoordelen hoe goed het model dit heeft gedaan op twee punten:"
+msgstr ""
+"Een Large Language Model heeft geprobeerd je verhaal te reconstrueren. Je "
+"taak is om te beoordelen hoe goed het model dit heeft gedaan op twee punten:"
 
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:10
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:10
@@ -343,7 +431,12 @@ msgid ""
 "model almost completely deviates from the original story in terms of "
 "factuality, writing, and ordering. A score of 10 means that the model has "
 "accurately reconstructed the writing and ordering of the original story."
-msgstr "Hoe goed heeft het model het verhaal gereconstrueerd? Een score van 0 betekent dat het model bijna volledig afwijkt van het originele verhaal qua feitelijkheid, schrijven en ordening. Een score van 10 betekent dat het model het schrijven en de ordening van het originele verhaal nauwkeurig heeft gereconstrueerd."
+msgstr ""
+"Hoe goed heeft het model het verhaal gereconstrueerd? Een score van 0 "
+"betekent dat het model bijna volledig afwijkt van het originele verhaal qua "
+"feitelijkheid, schrijven en ordening. Een score van 10 betekent dat het "
+"model het schrijven en de ordening van het originele verhaal nauwkeurig "
+"heeft gereconstrueerd."
 
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:13
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:13
@@ -358,7 +451,12 @@ msgid ""
 "model output? A score of 0 means that the model has produced garbage, "
 "unintelligible output. A score of 10 means that the model has written a "
 "fluent and coherent story."
-msgstr "Het is mogelijk dat het model (delen van) het verhaal heeft herschreven. De reconstructiekwaliteit buiten beschouwing gehouden: hoe leesbaar en samenhangend is de modeluitvoer? Een score van 0 betekent dat het model rommel heeft geproduceerd. Een score van 10 betekent dat het model een vloeiend en samenhangend verhaal heeft geschreven."
+msgstr ""
+"Het is mogelijk dat het model (delen van) het verhaal heeft herschreven. De "
+"reconstructiekwaliteit buiten beschouwing gehouden: hoe leesbaar en "
+"samenhangend is de modeluitvoer? Een score van 0 betekent dat het model "
+"rommel heeft geproduceerd. Een score van 10 betekent dat het model een "
+"vloeiend en samenhangend verhaal heeft geschreven."
 
 #: webapp/templates/04_rate_human_shuffle_reconstructed.html:23
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:23
@@ -370,25 +468,34 @@ msgstr "De reconstructie van het LLM"
 msgid ""
 "Note that the LLM may make some formatting errors. This is expected and "
 "should not be rated negatively."
-msgstr "Het kan zijn dat het LLM enkele opmaakfouten maakt. Dit is te verwachten en moet niet meewegen in je beoordeling."
+msgstr ""
+"Het kan zijn dat het LLM enkele opmaakfouten maakt. Dit is te verwachten en "
+"moet niet meewegen in je beoordeling."
 
 #: webapp/templates/04a_next_reconstruction.html:5
 msgid ""
 "The next task is very similar to the one you just did, except that the story "
 "was shuffled randomly instead of by you."
-msgstr "De volgende taak lijkt erg op degene die je zojuist hebt gedaan, behalve dat het verhaal willekeurig is herschikt in plaats van door jou."
+msgstr ""
+"De volgende taak lijkt erg op degene die je zojuist hebt gedaan, behalve dat "
+"het verhaal willekeurig is herschikt in plaats van door jou."
 
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:5
 msgid ""
 "Task 4: Rating the model's reconstruction of the system's random shuffle"
-msgstr "Taak 4: Beoordeling van de reconstructie van een willekeurige herschikking"
+msgstr ""
+"Taak 4: Beoordeling van de reconstructie van een willekeurige herschikking"
 
 #: webapp/templates/05_rate_random_shuffle_reconstructed.html:8
 msgid ""
 "This task is identical to the previous one, except that the story has been "
 "shuffled completely randomly by the system. Your task is to rate how well "
 "the model has reconstructed the story on the same two points as before:"
-msgstr "Deze taak is identiek aan de vorige, behalve dat het verhaal volledig willekeurig is herschikt door het systeem. Je taak is om te beoordelen hoe goed het model het verhaal heeft gereconstrueerd op dezelfde twee punten als voorheen:"
+msgstr ""
+"Deze taak is identiek aan de vorige, behalve dat het verhaal volledig "
+"willekeurig is herschikt door het systeem. Je taak is om te beoordelen hoe "
+"goed het model het verhaal heeft gereconstrueerd op dezelfde twee punten als "
+"voorheen:"
 
 #: webapp/templates/06_thank_you.html:5
 msgid "Thank you!"
@@ -399,14 +506,20 @@ msgid ""
 "This concludes the experiment. You are very much encouraged to redo the "
 "experiment as much as you like, provided all your stories are somewhat "
 "unique. The more stories, the better!"
-msgstr "Dit is het einde van het experiment. Je wordt van harte aangemoedigd om het experiment zo vaak te herhalen als je wilt, mits al je verhalen enigszins uniek zijn. Hoe meer verhalen, hoe beter!"
+msgstr ""
+"Dit is het einde van het experiment. Je wordt van harte aangemoedigd om het "
+"experiment zo vaak te herhalen als je wilt, mits al je verhalen enigszins "
+"uniek zijn. Hoe meer verhalen, hoe beter!"
 
 #: webapp/templates/06_thank_you.html:8
 msgid ""
 "Feel free to ask us any questions you may have about the experiment or the "
 "world of large language models. On behalf of the team, we thank you for your "
 "participation!"
-msgstr "Wees vrij om ons vragen te stellen die je hebt over het experiment of over de wereld van grote taalmodellen. Namens het team bedanken we je voor je deelname!"
+msgstr ""
+"Wees vrij om ons vragen te stellen die je hebt over het experiment of over "
+"de wereld van grote taalmodellen. Namens het team bedanken we je voor je "
+"deelname!"
 
 #: webapp/templates/base.html:23
 msgid "End experiment"

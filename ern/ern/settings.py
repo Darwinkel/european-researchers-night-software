@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import secrets
 from pathlib import Path
 
 import environ
@@ -18,7 +19,15 @@ from django.utils.translation import gettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-env = environ.Env(DEBUG=(bool, False), OPENAPI_HOST=(str, "http://localhost"), ALLOWED_HOST=(str, "http://localhost"))
+env = environ.Env(
+    DEBUG=(bool, False),
+    ALLOWED_HOST=(str, "http://localhost"),
+    SECRET_KEY=(str, secrets.token_urlsafe(64)),
+    NL_OPENAI_HOST=(str, "http://localhost:8891/v1"),
+    EN_OPENAI_HOST=(str, "http://localhost:8890/v1"),
+    NL_MODEL=(str, "BramVanroy/GEITje-7B-ultra"),
+    EN_MODEL=(str, "microsoft/Phi-3.5-mini-instruct"),
+)
 
 environ.Env.read_env(BASE_DIR / ".env")
 
@@ -27,7 +36,7 @@ environ.Env.read_env(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "%pj364s^&0o8w$_1e@c-u5ddd5%utxpfgzf47pxko5ut5%utxpf5%utxpf5%utxpf5%utxpf5%utxpft^6)"  # noqa: S105
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")

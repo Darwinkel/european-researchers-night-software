@@ -20,27 +20,27 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 def why(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """Why view."""
     return render(request, "01a_why.html")
 
 
 def what(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """Info view."""
     return render(request, "01b_what.html")
 
 
 def how(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """How view."""
     return render(request, "01c_how.html")
 
 
 def other(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """Other view."""
     return render(request, "01d_other.html")
 
 
 def next_reconstruction(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """Next reconstruction view."""
     return render(request, "04a_next_reconstruction.html")
 
 
@@ -200,5 +200,5 @@ def rate_random_shuffle_reconstructed(request: HttpRequest) -> HttpResponse:
 
 
 def thank_you(request: HttpRequest) -> HttpResponse:
-    """Thank-you view view."""
+    """Thank-you view."""
     return render(request, "06_thank_you.html")
