@@ -1,6 +1,7 @@
 # European Researcher's Night Software
 
 This Django application was used for the European Researcher's Night 2024 to collect data.
+The code was cleaned up for public release, but take note that it was not extensively tested after this.
 
 # Development installation
 Dependencies are handled with Poetry. See `make run` for the recommend way to run the project.
