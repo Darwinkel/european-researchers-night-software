@@ -10,7 +10,7 @@ package-mode = false
 python = "^3.12"
 django = "^5.0"
 nltk = "^3.9"
-openai = "^1.50"
+openai = "^1.54"
 django-environ = "^0.11.2"
 
 [tool.poetry.group.dev.dependencies]
